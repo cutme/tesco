@@ -11,7 +11,7 @@
 		transform: translateY(0);
 	}
 	
-	.c-messages & {
+	&--messages {
 		left: calc((100% - 960px)/2);
 	}
 
