@@ -1,0 +1,15 @@
+.o-row {
+	@extend %flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+    align-items: center;
+	margin-bottom: 10px;
+	
+	&__col {
+		flex-grow: 1;
+	}
+	
+	&--space-between {
+		justify-content: space-between;
+	}
+}

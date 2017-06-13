@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+@@include('./includes/head.html')
+<body>
+
+
+	@@include('./includes/top-logged.html')
+	
+	
+	<div class="c-page c-page--dashboard">
+
+		<div class="c-propform">
+			<div class="c-propform__content">
+				<header class="o-header text-center">
+					<h3 class="o-header__title">Twoja propozycja poprawki</h3>
+				</header>
+		
+				<form action="#" class="o-form">
+					<div class="o-row">
+						<div class="o-row__col">
+							<strong>Kategoria pomysłu</strong>
+						</div>
+						
+						<div class="o-row__col o-row__col--select">
+							<select class="nice-select">
+								<option>wybierz z listy</option>
+								<option>Dobry</option>
+								<option>Lepszy</option>
+								<option>Super</option>
+							</select>
+						</div>
+					</div>
+	
+					<div class="o-row">
+						<input type="text" class="o-field" placeholder="Temat pomysłu">
+					</div>
+					
+					<div class="o-row">
+						<input type="text" class="o-field" placeholder="Imię i nazwisko lub numer sklepu">
+					</div>
+					
+					<div class="o-row">
+						<input type="email" class="o-field" placeholder="Adres e-mail">
+					</div>
+					
+					<div class="o-row">
+						<input type="email" class="o-field" placeholder="Powtórz adres e-mail">
+					</div>
+					
+					<div class="o-row">
+						<textarea class="o-field" placeholder="Opisz co trzeba poprawić"></textarea>
+					</div>
+					
+					<div class="o-row">
+						<div class="o-row__col">
+							<a href="#" class="o-btn o-btn--blue-darker o-btn--big"><i class="icon-plus"></i> Dodaj zdjęcia</a>
+						</div>
+						
+						<div class="o-row__col">
+							<button type="submit" class="o-btn o-btn--red o-btn--big">Wyślij propozycję <i class="icon-tools"></i></button>
+						</div>
+					</div>
+					
+					<div class="o-row">
+						<div class="c-meta">
+							<div class="c-meta__upload" >
+								Dodano zdjęć (3) <a href="#" class="c-meta__del"><i class="icon-x"></i> Usuń</a>
+							</div>
+							
+							<div class="c-meta__textarea">
+								Pozostało 500 znaków
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<div class="c-messages">
+			<div class="c-messages__content">
+				<header class="o-header o-header--default">
+					<h3 class="o-header__title"><i class="icon-message"></i> Wiadomości</h3>
+				
+					<a href="archiwum.html" class="o-btn o-btn--blue"><i class="icon-archive"></i> archiwum wiadomości</a>
+				</header>
+				
+				@@include('./includes/messages.html')
+			</div>
+		</div>
+	</div>
+
+	
+	<picture class="o-bgphoto">
+		<source 
+			media="(max-width: 768px)" 
+			srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+			data-srcset="img/bg/dashboard.jpg">
+		<img 
+			class="b-lazy" 
+			src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+			data-src="img/bg/dashboard@2x.jpg" alt="" width="1920" height="1000">
+	</picture>
+
+
+
+
+	@@include('./includes/footer.html')
+	@@include('./includes/scripts.html')
+
+</body>
+</html>

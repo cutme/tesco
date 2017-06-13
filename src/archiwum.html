@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+@@include('./includes/head.html')
+<body>
+
+
+	@@include('./includes/top-logged.html')
+	
+	
+	<div class="c-page c-page--default">
+
+		<div class="c-messages c-messages--wide">
+		
+			<div class="c-messages__content">
+				<header class="o-header o-header--default">
+					<h3 class="o-header__title"><i class="icon-archive"></i> Archiwum wiadomości</h3>
+				</header>
+
+				@@include('./includes/messages.html')
+			</div>			
+		</div>
+	</div>
+	
+	
+	<div class="c-navbtn c-navbtn--prev">
+		<a href="#" class="o-btn o-btn--white weight-medium js-back"><i class="icon-arrow-fat--left"></i> Powrót</a>
+	</div>
+
+	
+	<picture class="o-bgphoto">
+		<source 
+			media="(max-width: 768px)" 
+			srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+			data-srcset="img/bg/archive.jpg">
+		<img 
+			class="b-lazy" 
+			src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+			data-src="img/bg/archive@2x.jpg" alt="" width="1920" height="1000">
+	</picture>
+
+
+
+
+	@@include('./includes/footer.html')
+	@@include('./includes/scripts.html')
+
+</body>
+</html>

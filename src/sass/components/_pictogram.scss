@@ -1,0 +1,53 @@
+.c-pictogram {
+	@extend %flex-xy;
+    flex-direction: column;
+	width: 280px;
+	height: 280px;
+	background-color: white;
+	border-radius: 50%;
+	margin: 0 auto 40px auto;
+	
+	> div {
+		margin-bottom: 20px;
+		
+		i {
+			margin: 0 2px;
+		}
+	}
+	
+	i {
+		margin-bottom: 20px;
+		font-size: em(48);
+	}
+	
+	span {
+		display: block;
+		font-size: em(20);
+		color: $c-blue;
+	}
+	
+	&.implemented {
+		color: $c-green;
+	}
+	
+	&.accepted {
+		color: $c-blue--brighter;
+	}
+	
+	&.rejected,
+	&.submitted {
+		color: $c-red--brighter;
+	}
+	
+	&.tools {
+		color: $c-blue--brighter;
+		
+		i {
+			font-size: em(66);
+		}
+	}
+	
+	&.verified {
+		color: $c-yellow;
+	}
+}

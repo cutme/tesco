@@ -1,0 +1,40 @@
+.c-loginbox {
+	//@extend %abs-xy;
+	width: 760px;
+	height: 280px;
+	background-image: url(../img/assets/loginbox.svg);
+	padding: 60px 140px 0 80px;
+	color: white;
+	
+	.o-header {
+		margin-bottom: 15px;
+		
+		.icon-keyboard {
+			display: inline-block;
+			margin-right: 10px;
+			vertical-align: middle;
+			font-size: em(18);
+		}
+	}
+	
+	.o-field {
+		width: 240px;
+		height: 48px;
+		margin-right: 5px;
+	}
+	
+	button {		
+		i {
+			padding-left: 2px;
+			font-size: em(10);
+		}
+	}
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}

@@ -1,0 +1,71 @@
+.c-pagination {
+	padding: 25px 40px;
+	color: white;
+	
+	&__content {
+		@extend %flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 40px;
+		background-color: $c-blue;
+		padding: 0 20px;
+	}
+	
+	a {
+		
+	}
+	
+	i {
+		display: inline-block;
+		vertical-align: middle;
+		color: #80add7;
+	}
+	
+	.next {
+		i {
+			margin-left: 6px;
+		}
+		
+		&:hover {
+			i {
+				transform: translateX(5px);
+			}
+		}
+	}
+	
+	.prev {
+		i {
+			margin-right: 6px;
+		}
+		
+		&:hover {
+			i {
+				transform: translateX(-5px);
+			}
+		}
+	}
+	
+	ul {
+		li {
+			display: inline-block;
+			height: 40px;
+
+			a {
+				display: block;
+				line-height: 40px;
+				padding: 0 8px;
+				
+				&:hover {
+					background-color: #009fe3;
+				}
+			}
+			
+			&.is-active {
+				a {
+					background-color: #009fe3;
+				}
+			}
+		}
+	}
+	
+}

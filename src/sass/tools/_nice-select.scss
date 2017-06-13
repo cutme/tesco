@@ -1,0 +1,133 @@
+.nice-select {
+	@extend %rel;
+	-webkit-tap-highlight-color: transparent;
+	width: 100%;
+	background-color: white;
+	clear: both;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	outline: none;
+	padding-left: 20px;
+	text-align: left !important;
+	transition: all 0.2s ease-in-out;
+	user-select: none;
+	white-space: nowrap;
+	border: 1px solid #80add7;	
+	color: $c-blue;
+	
+	.current {
+		font-weight: $bold;
+	}
+	
+	&:after {
+		position: absolute;
+		right: 0; top: 0;
+		display: block;
+		font-family: $icons;
+		content: "\e905";
+		width: 48px; height: 46px;
+		padding-left: 4px;
+		text-align: center;
+		font-size: em(9);
+		color: $c-blue--brightest;
+		transition: all 0.15s ease-in-out;
+	}
+	
+	.list {
+		@extend %abs;
+		box-shadow: 0 2px 4px rgba(black, .2);
+		margin-top: 4px;
+		border: 1px solid #80add7;
+		opacity: 0;
+		overflow: hidden;
+		padding: 10px 2px;
+		pointer-events: none;
+		top: 100%;
+		left: -1px;
+		width: calc(100% + 2px);
+		background-color: white;
+		color: white;
+		line-height: 1.8;
+		transform-origin: 50% 0;
+		
+		transform: scale(0.75) translateY(-21px);
+		transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+		z-index: 9;
+		
+		&:hover .option:not(:hover) {
+			background-color: transparent !important;
+		}
+	}
+	
+	&:hover {
+		border-color: $c-blue--darker;
+	}
+	
+	&:active, &.open, &:focus {
+		z-index: 20;
+		border-color: #999;
+	}
+	
+	
+	
+	&.open {
+		border: 1px solid #80add7;
+	}
+
+	&.open:after {
+		transform: scaleY(-1); //rotate(180deg);
+	}
+	
+	&.open .list {
+		opacity: 1;
+		pointer-events: auto;
+		transform: scale(1) translateY(0);
+	}
+	
+	.option {
+		padding: 4px 18px;
+		cursor: pointer;
+		outline: none;
+		transition: all 0.2s;
+		color: $c-blue;
+		
+		&:hover, 
+		&.focus, 
+		&.selected.focus {
+			color: $c-blue;
+		}
+		
+		
+		&.selected {
+			font-weight: $bold;
+		}
+		
+		&.disabled {
+			background-color: transparent;
+			color: #999;
+			cursor: default;
+		}
+		
+		&:hover {
+			background-color: #d4edfc;
+		}
+	}
+}
+  
+
+
+
+
+
+.no-csspointerevents .nice-select .list {
+	display: none;
+}
+
+.no-csspointerevents .nice-select.open .list {
+	display: block;
+}
+
+

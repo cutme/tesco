@@ -1,0 +1,8 @@
+.o-wrap {
+	@extend %clear;
+	@extend %wrap;	
+	
+	&--top-padding {
+		padding-top: 35px;
+	}
+}

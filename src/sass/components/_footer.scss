@@ -1,0 +1,24 @@
+.c-footer {
+	@extend %wrap;	
+	//@extend %abs;
+	@extend %flex;
+	width: 	100%;
+	height: 40px;
+	//bottom: 15px;
+	//left: calc( (100% - 1200px ) / 2 );
+    justify-content: space-between;
+	//width: $base + px;
+	color: white;
+	
+	&__copy {
+		a {
+			@extend %underline-onstart;
+		}
+	}
+	
+	&__created {
+		img {
+			display: inline-block;
+		}
+	}
+}

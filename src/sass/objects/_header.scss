@@ -1,0 +1,41 @@
+.o-header {
+	@extend %rel;
+
+	&__title {
+		font: {
+			size: em(32);
+			weight: $bold;
+		}
+	}
+	
+	&__subtitle {
+		font: {
+			size: em(24);
+		}
+	}
+	
+	&--default {
+		padding: 20px 60px;
+		border-bottom: 1px solid $c-gray--brighter;
+
+		.o-header__title {
+			color: $c-blue;
+			
+			i {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 15px;
+				color: $c-blue--brighter;
+			}
+		}
+
+		.o-btn {
+			@extend %abs-y;
+			right: 40px;
+			font: {
+				size: em(14);
+				weight: $regular;
+			}
+		}
+	}
+}

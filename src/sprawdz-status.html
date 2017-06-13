@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+@@include('./includes/head.html')
+<body>
+
+
+	@@include('./includes/top-logged.html')
+	
+	
+	<div class="c-page c-page--vertical-center c-page--default">
+		<div class="c-status-check">
+			<header class="o-header text-center">
+				<h3 class="o-header__title">Sprawdź status swojej poprawki</h3>
+			</header>
+		
+			<form action="#" class="o-form" data-parsley-validate data-parsley-errors-messages-disabled>
+				<div class="o-row">
+					<input 
+						type="number" 
+						class="o-field o-field--big o-field--1" 
+						placeholder="Numer Twojej sprawy" 
+						autocomplete="off" required 
+						data-parsley-type="number" 
+						data-parsley-trigger="keyup">
+	
+					<input 
+						type="email" 
+						class="o-field o-field--big o-field--2" 
+						placeholder="Twój adres e-mail" 
+						autocomplete="off" 
+						required 
+						data-parsley-type="email" 
+						data-parsley-trigger="change">
+	
+					<button type="submit" class="o-btn o-btn--red o-btn--big weight-black">Sprawdź <i class="icon-circle in-oval"></i></button>
+				</div>
+				
+				<div class="o-row text-center">
+					<p>Aby sprawdzić status swojej poprawki, podaj numer Twojej sprawy i adres email.</p>
+				</div>
+			</form>		
+		</div>		
+	</div>
+	
+	
+	<div class="c-navbtn c-navbtn--prev">
+		<a href="#" class="o-btn o-btn--white weight-medium js-back"><i class="icon-arrow-fat--left"></i> Powrót</a>
+	</div>
+
+	
+	<picture class="o-bgphoto">
+		<source 
+			media="(max-width: 768px)" 
+			srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+			data-srcset="img/bg/status.jpg">
+		<img 
+			class="b-lazy" 
+			src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+			data-src="img/bg/status@2x.jpg" alt="" width="1920" height="1000">
+	</picture>
+
+
+
+
+	@@include('./includes/footer.html')
+	@@include('./includes/scripts.html')
+
+</body>
+</html>

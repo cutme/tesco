@@ -1,0 +1,30 @@
+.c-filters {
+	@extend %flex;
+    justify-content: space-between;
+	margin-bottom: 20px;
+	padding: 20px 40px;
+	border-bottom: 1px solid $c-gray--brighter;
+	color: $c-blue;
+
+	&__item {
+		@extend %flex;
+	    align-items: center;
+    
+		&--wide {
+			width: 210px;
+		}
+		
+		&--short {
+			width: 160px;
+			
+			span {
+				padding: 0 10px;
+			}
+		}
+	}
+	
+	.o-field {
+		border-color: #80add7;
+		box-shadow: none;
+	}
+}

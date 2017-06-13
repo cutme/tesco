@@ -1,0 +1,28 @@
+.c-meta {
+	@extend %flex;
+	width: 100%;
+    justify-content: space-between;
+    padding-top: 10px;
+	color: rgba(white, .5);
+	font-size: em(12);
+	
+	&__del {
+		@extend %underline-onhover;
+		margin-left: 10px;
+		color: white;
+		
+		&:hover {
+			color: white;
+		}
+		
+		i {
+			
+			color: $c-red;
+		}
+	}
+	
+	.icon-x {
+		margin-right: 2px;
+		font-size: em(12);
+	}
+}

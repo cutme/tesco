@@ -1,0 +1,40 @@
+.o-field {
+	@extend %anim-slow;
+	padding: 0 20px;
+	height: 40px;
+	background-color: white;
+	border: 1px solid transparent;
+	box-shadow: rgba(black, .1) 0 0 10px;
+	font: {
+		size: em(14);
+		weight: $medium;
+	}
+	
+	
+	&--textarea {
+		
+	}
+
+	&--big {
+		height: 48px;
+	}
+	
+	.has-error & {
+		border-color: $c-red !important;
+	}
+	color: $c-blue;
+
+	&:focus {
+		box-shadow: rgba(black, .3) 0 0 40px;
+	}
+	
+	&.parsley-error {
+		border-color: $c-red;
+		color: $c-red;
+	}
+}
+
+textarea.o-field {
+	height: 120px;
+	padding: 10px 20px;
+}

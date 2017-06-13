@@ -1,0 +1,36 @@
+.c-navbtn {
+	@extend %anim-slow;
+	@extend %abs;
+	left: calc((100% - 1200px)/2);
+	top: 100px;
+	z-index: 20;
+	
+	transform: translateY(-100%);
+	
+	.pace-done & {
+		transform: translateY(0);
+	}
+	
+	.c-messages & {
+		left: calc((100% - 960px)/2);
+	}
+
+	i {
+		color: $c-red;
+	}
+
+	&--prev {
+		.o-btn {
+			i {
+				margin-right: 10px;
+				font-size: em(11) !important;
+			}
+			
+			&:hover {
+				i {
+					transform: translateX(-5px);
+				}
+			}
+		}
+	}
+}

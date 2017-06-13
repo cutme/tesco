@@ -1,0 +1,46 @@
+.c-status-check {
+	width: 650px;
+	color: white;
+
+	.o-header {
+		margin-bottom: 30px;
+	}
+	
+	.o-field {
+		float: left;
+		margin-right: 5px;
+
+		&--1 {
+			width: 190px;
+		}
+		
+		&--2 {
+			width: 260px;
+		}
+	}
+	
+	.o-btn {
+		width: 190px;
+		
+		i {
+			
+			font-size: em(14);
+			
+			&:before {
+				@extend %anim-slow;
+			}
+		}
+		
+		&:hover {
+			i {				
+				&:before {
+					transform: rotate(360deg);
+				}
+			}
+		}
+	}
+	
+	.o-wrap {
+		margin-bottom: 20px;
+	}
+}

@@ -1,0 +1,27 @@
+.c-nav {
+	@extend %abs-y;
+	@extend %flex;
+	@extend %anim-slow;
+	right: 20px;
+	opacity: 0;
+	transform: translateY(-100%);
+	
+	.o-btn {
+		margin-right: 5px;
+		
+		&:last-of-type {
+			//margin: 0;
+		}
+		
+		.icon-circle {
+			margin-right: 10px;
+			font-size: em(14);
+			color: $c-blue--brighter;
+		}
+	}
+	
+	.pace-done & {
+		opacity: 1;
+		transform: translateY(-50%);
+	}
+}

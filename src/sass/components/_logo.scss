@@ -1,0 +1,8 @@
+.c-logo {
+	@extend %abs-y;
+	transform: translateY(calc(-50% + 3px));
+	left: 20px;
+	display: block;
+	width: 138px;
+	height: 68px;
+}

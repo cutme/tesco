@@ -1,0 +1,65 @@
+[class^="icon-"], [class*=" icon-"] {
+	@include icomoon;
+}
+
+.in-oval {
+	@extend %flex-xy;
+	width: 32px; height: 32px;
+	margin-left: 10px;
+	border: 2px solid white;
+	border-radius: 50%;
+}
+
+.is-fixed {
+	position: fixed;
+}
+
+.is-hidden {
+	//opacity: 0;
+}
+
+.margin-100 {
+	
+	@media screen and ( min-width: $smartphone + 1px ) {
+		margin-bottom: 100px;
+	}
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.pull-right {
+	float: right !important;;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-justify {
+	text-align: justify;
+	text-align-last: center;
+}
+
+.weight-black {
+	font-weight: $black;
+}
+
+.weight-medium {
+	font-weight: $medium;
+}
+
+/* IE */
+
+@media screen and (max-width:400px) {
+    @-ms-viewport{
+        width:320px;
+    }
+}
+
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
