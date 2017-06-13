@@ -1,6 +1,10 @@
 .c-messages {
 	width: $messages + px;
 	
+	.c-page--messages & {
+		padding-top: 20px;
+	}
+	
 	&--wide {
 		width: $messages--wide + px;
 	}
