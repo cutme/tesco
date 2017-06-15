@@ -8,6 +8,15 @@
 	margin-left: 10px;
 	border: 2px solid white;
 	border-radius: 50%;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		width: 48px; height: 48px;
+	}
+	
+	@media screen and ( max-width: 560px ) {
+		width: get-vw-560(48);
+		height: get-vw-560(48);
+	}
 }
 
 .is-fixed {

@@ -1,22 +1,43 @@
 .c-status-check {
 	width: 650px;
 	color: white;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		width: 600px;
+		padding: 0 20px;
+	}
+	
+	p {
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			font-size: em(20);
+		}		
+		
+		@media screen and ( max-width: 560px ) {
+			font-size: get-vw-560(20);
+		}
+	}
 
 	.o-header {
 		margin-bottom: 30px;
 	}
-	
-	.o-field {
-		float: left;
-		margin-right: 5px;
 
-		&--1 {
-			width: 190px;
+	.o-field {
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			float: left;
+			margin-right: 5px;
+			
+			&--1 {
+				width: 190px;
+			}
+			
+			&--2 {
+				width: 260px;
+			}
 		}
 		
-		&--2 {
-			width: 260px;
-		}
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			margin-bottom: 10px
+		}		
 	}
 	
 	.o-row {
@@ -25,6 +46,11 @@
 	
 	.o-btn {
 		width: 190px;
+
+		@media screen and ( max-width: $tablet_portrait + 1px ) {
+			width: 100%;
+		}
+		
 		
 		i {
 			

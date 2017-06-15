@@ -7,6 +7,12 @@
 	border-radius: 50%;
 	margin: 0 auto 40px auto;
 	
+	@media screen and ( max-width: 560px ) {
+		width: get-vw-560(280);
+		height: get-vw-560(280);
+		margin-bottom: get-vw-560(40)
+	}
+	
 	> div {
 		margin-bottom: 20px;
 		
@@ -18,12 +24,20 @@
 	i {
 		margin-bottom: 20px;
 		font-size: em(48);
+		
+		@media screen and ( max-width: 560px ) {
+			font-size: get-vw-560(48);
+		}
 	}
 	
 	span {
 		display: block;
 		font-size: em(20);
 		color: $c-blue;
+		
+		@media screen and ( max-width: 560px ) {
+			font-size: em(16);
+		}
 	}
 	
 	&.implemented {

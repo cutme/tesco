@@ -5,6 +5,9 @@
 
 	$(document).ready(function() {
 		
+		tesco.Helper.isMobile();
+		tesco.Nav.init();
+		
 		if (tesco.Helper.exist('.b-lazy')) tesco.Helper.blazy();
 		if (tesco.Helper.exist('.js-accordion')) tesco.Accordion.init('#list');
 		if (tesco.Helper.exist('.js-back')) tesco.Helper.back();

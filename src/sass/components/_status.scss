@@ -4,6 +4,10 @@
 	
 	.o-header {
 		margin-bottom: 40px;
+		
+		@media screen and ( max-width: 560px ) {
+			margin-bottom: get-vw-560(40);
+		}
 	}
 	
 	&__message {

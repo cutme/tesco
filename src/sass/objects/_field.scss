@@ -4,25 +4,31 @@
 	height: 40px;
 	background-color: white;
 	border: 1px solid transparent;
+	border-radius: 0;
 	box-shadow: rgba(black, .1) 0 0 10px;
 	font: {
 		size: em(14);
 		weight: $medium;
 	}
+	color: $c-blue;
 	
-	
-	&--textarea {
-		
-	}
-
 	&--big {
 		height: 48px;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			height: 80px;
+			font-size: em(20);
+		}
+		
+		@media screen and ( max-width: 560px ) {
+			height: get-vw-560(80);
+			font-size: get-vw-560(20);
+		}
 	}
 	
 	.has-error & {
 		border-color: $c-red !important;
-	}
-	color: $c-blue;
+	}	
 
 	&:focus {
 		box-shadow: rgba(black, .3) 0 0 40px;

@@ -1,0 +1,24 @@
+.o-hamburger {
+	@extend %abs-y;
+	z-index: 20;
+	display: none;
+	right: 40px;
+	font-size: em(40);
+	color: #00529f;
+	
+	@media screen and ( max-width: $tablet + 1px ) {
+		display: block;
+	}
+	
+	@media screen and ( max-width: 560px ) {
+		right: get-vw-560(40);
+		font-size: get-vw-560(40);
+	}
+
+	.mobile-nav & {
+		&:before {
+			color: #009fe3;
+			content: "\e916" !important;
+		}
+	}
+}

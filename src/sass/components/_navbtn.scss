@@ -3,12 +3,41 @@
 	@extend %abs;
 	left: calc((100% - 1200px)/2);
 	top: 100px;
-	z-index: 20;
+	z-index: 30;
+	transform: translateX(-100%);
+	opacity: 0;
 	
-	transform: translateY(-100%);
+	@media screen and ( max-width: $base + px ) {
+		left: 20px;
+	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		position: fixed;
+		left: 40px; top: 32px;
+		font-size: em(20);
+		
+		@media screen and ( max-width: 560px ) {
+			left: get-vw-560(40);
+			top: get-vw-560(32);
+			font-size: get-vw-560(20);
+			
+			span {
+				display: none;
+			}
+			//font-size: get-vw-560(20);
+		}
+		
+		
+		.icon-arrow-fat--left {
+			&:before {
+				font-size: em(20);
+			}
+		}
+	}
 	
 	.pace-done & {
-		transform: translateY(0);
+		transform: translateX(0);
+		opacity: 1;
 	}
 	
 	&--messages {
@@ -21,6 +50,12 @@
 
 	&--prev {
 		.o-btn {
+			@media screen and ( max-width: $tablet + px ) {
+				background: none;
+				padding: 0;
+				height: auto;
+			}
+			
 			i {
 				margin-right: 10px;
 				font-size: em(11) !important;

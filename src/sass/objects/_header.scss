@@ -6,6 +6,10 @@
 			size: em(32);
 			weight: $bold;
 		}
+		
+		@media screen and ( max-width: 560px ) {
+			font-size: get-vw-560(32);
+		}
 	}
 	
 	&__subtitle {

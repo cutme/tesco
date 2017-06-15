@@ -1,7 +1,11 @@
 .pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
-  user-select: none;
+	-webkit-pointer-events: none;
+	pointer-events: none;
+	user-select: none;
+	
+	.mobile & {
+		display: none;
+	}
 }
 
 .pace-inactive {

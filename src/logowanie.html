@@ -7,50 +7,43 @@
 	@@include('./includes/top.html')
 	
 	
-	<div class="c-page c-page--default c-page--vertical-center">
-		<div class="c-loginbox">
-			<header class="o-header">
-				<h3 class="o-header__title"><i class="icon-keyboard"></i> Podaj swój numer pracownika</h3>
-			</header>
+	<div class="o-bg o-bg--login b-lazy" data-src="img/bg/login@2x.jpg">
+		<div class="c-page c-page--login anim anim--default">
+			<div class="c-loginbox">
+				<header class="o-header">
+					<h3 class="o-header__title"><i class="icon-keyboard"></i> Podaj swój numer pracownika</h3>
+				</header>
+			
+				<form action="#" class="o-form" data-parsley-validate data-parsley-errors-messages-disabled>
+					<div class="o-row">
+						<input 
+							type="number" 
+							class="o-field o-field--big" 
+							autocomplete="off" 
+							required 
+							data-parsley-maxlength="6" 
+							data-parsley-type="number" 
+							data-parsley-trigger="keyup">
 		
-			<form action="#" class="o-form" data-parsley-validate data-parsley-errors-messages-disabled>
-				<div class="o-row">
-					<input 
-						type="number" 
-						class="o-field o-field--big" 
-						autocomplete="off" 
-						required 
-						data-parsley-maxlength="6" 
-						data-parsley-type="number" 
-						data-parsley-trigger="keyup">
-	
-					<button type="submit" class="o-btn o-btn--red o-btn--big">Zaloguj się <i class="icon-arrow-fat--right in-oval"></i></button>
-				</div>
-				
-				<div class="o-row">
-					<p>Numer powinien składać się z 6 cyfr (np. 012345).</p>
-					<p>W przypadku, gdy Twój numer pracownika jest 5-cyfrowy dodaj z przodu jedno zero.</p>
-				</div>
-			</form>
+						<button type="submit" class="o-btn o-btn--red o-btn--big"><span>Zaloguj się </i> <i class="icon-arrow-fat--right in-oval"></i></span></button>
+					</div>
+					
+					<div class="o-row">
+						<p>Numer powinien składać się z 6 cyfr (np. 012345).</p>
+						<p>W przypadku, gdy Twój numer pracownika jest 5-cyfrowy dodaj z przodu jedno zero.</p>
+					</div>
+				</form>
+			</div>
 		</div>
+		
+		
+		@@include('./includes/footer.html')
 	</div>
 
+
+
+
 	
-	<picture class="o-bgphoto">
-		<source 
-			media="(max-width: 768px)" 
-			srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
-			data-srcset="img/bg/login.jpg">
-		<img 
-			class="b-lazy" 
-			src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
-			data-src="img/bg/login@2x.jpg" alt="" width="1920" height="1000">
-	</picture>
-
-
-
-
-	@@include('./includes/footer.html')
 	@@include('./includes/scripts.html')
 
 </body>

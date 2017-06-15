@@ -5,3 +5,13 @@
 @function grid( $width, $context: $base ) {
     @return percentage( $width / $context );
 }
+
+@function get-vw-768($target) {
+	$vw-context: (768 * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-560($target) {
+	$vw-context: (560 * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}

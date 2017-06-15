@@ -1,0 +1,64 @@
+.o-bg {
+	//@extend %fixed;
+	//left: 0; top: 0; bottom: 0; z-index: 1;
+	//width: 100%;
+	@extend %rel;
+	min-height: 100vh;
+	
+	background: {
+		size: cover;
+		position: center;
+	}
+	overflow: hidden;
+
+	@media screen and ( min-width: $tablet_portrait + 1px ) {
+		//min-height: calc(100vh - 40px);
+		//padding-bottom: 40px;
+	}
+	
+	.mobile & {
+		//position: sticky;
+
+	}
+
+	&--login {
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			background-image: url(../img/bg/login.jpg) !important;
+		}
+	}
+	
+	&--message {
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			background-image: url(../img/bg/message.jpg) !important;
+		}
+	}
+	
+	&--status {
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			background-image: url(../img/bg/status.jpg) !important;
+		}
+	}
+	
+	/*
+img {
+		@extend %abs-xy;
+		max-width: none;		
+		height: 100%;
+		width: auto;
+		
+		@media screen and ( min-aspect-ratio: 78/41 ) and ( min-width: $tablet_portrait + 1px ) {
+			width: 100%;
+			height: auto;
+		}
+
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			width: 100%;
+			height: auto;
+		}
+		
+		@media screen and ( max-width: 560px ) {
+		//	height: 100vh;
+		}
+	}
+*/
+}

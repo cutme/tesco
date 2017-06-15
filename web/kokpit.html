@@ -11,6 +11,10 @@
 	<!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
 
 	<link href="css/libs.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
@@ -26,11 +30,23 @@
 				<img src="img/logo/tesco.svg" alt="Tesco" width="138" height="61">
 			</a>
 			
-			<div class="c-nav">
-				<a href="sprawdz-status.html" class="o-btn o-btn--blue"><i class="icon-circle"></i> Sprawdź status</a>
-				<a href="lista-zgloszonych-poprawek.html" class="o-btn o-btn--blue"><i class="icon-list"></i> Lista zgłoszonych poprawek</a>
-				<a href="logowanie.html" class="o-btn o-btn--blue-border"><i class="icon-power"></i> Wyloguj</a>
-			</div>
+			<nav class="c-nav js-menu">
+				<ul>
+					<li>
+						<a href="sprawdz-status.html" class="o-btn o-btn--blue"><i class="icon-circle"></i> Sprawdź status</a>
+					</li>
+					
+					<li>
+						<a href="lista-zgloszonych-poprawek.html" class="o-btn o-btn--blue"><i class="icon-list"></i> Lista zgłoszonych poprawek</a>
+					</li>
+					
+					<li>
+						<a href="logowanie.html" class="o-btn o-btn--blue-border"><i class="icon-power"></i> Wyloguj</a>
+					</li>
+				</ul>				
+			</nav>
+			
+			<a href="#" class="o-hamburger icon-hamburger js-nav"></a>
 		</div>
 	</div>
 
@@ -157,7 +173,7 @@
 		<source 
 			media="(max-width: 768px)" 
 			srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
-			data-srcset="img/bg/dashboard.jpg">
+			data-srcset="img/bg/login.jpg">
 		<img 
 			class="b-lazy" 
 			src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
@@ -170,8 +186,8 @@
 		
 	
 	<footer class="c-footer">
-		<p class="c-footer__copy">&copy; Wszelkie prawa zastrzeżone dla Tesco Polska. <a href="#">Regulamin</a> serwisu</p>
-		<p class="c-footer__created">Created by <a href="https://roxxmedia.pl" target="_blank"><img src="img/logo/roxx.svg" alt="Roxx" width="35" height="11"></a></p>
+			<p class="c-footer__copy">&copy; Wszelkie prawa zastrzeżone dla Tesco Polska. <a href="#">Regulamin</a> serwisu</p>
+			<p class="c-footer__created">Created by <a href="https://roxxmedia.pl" target="_blank"><img src="img/logo/roxx.svg" alt="Roxx" width="35" height="11"></a></p>
 	</footer>
 
 

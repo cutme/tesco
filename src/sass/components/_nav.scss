@@ -1,27 +1,146 @@
 .c-nav {
-	@extend %abs-y;
-	@extend %flex;
 	@extend %anim-slow;
-	right: 20px;
-	opacity: 0;
-	transform: translateY(-100%);
+
+	@media screen and ( max-width: $tablet + px ) {
+		display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
+    }
+
+	ul {
+		@extend %flex;
+
+		@media screen and ( max-width: $tablet + px ) {
+			width: 600px;
+			padding: 0 20px;
+			flex-wrap: wrap;			
+		}
+
+		@media screen and ( max-width: 560px ) {
+			width: 100%;
+		}
+
+		li {
+			@media screen and ( max-width: $tablet + px ) {
+				width: 100%;
+				background: red;
+				margin-bottom: 20px;
+			}
+
+			@media screen and ( max-width: 560px ) {
+				//padding: 0 20px;
+			}
+
+			.desktop & {
+				@media screen and ( min-height: 588 + px ) and ( max-width: $tablet + px ) {
+
+					&:last-child {
+					   	position: absolute;
+					   	left: 50%;
+						transform: translateX(-50%);
+					    width: 560px;
+					    bottom: 30px;
+					}
+				}
+
+				@media screen and ( min-height: 588 + px ) and ( max-width: 560px ) {
+
+					&:last-child {
+						width: calc(100% - 40px);
+					}
+				}
+			}
+			
+			.mobile & {
+				
+				// 2*264+40+20
+				@media screen and  ( max-width: $tablet + px ) {
+					
+					&:last-child {
+					    position: absolute;
+					    left: 50%;
+					    width: 560px;
+					    bottom: 30px;
+					    transform: translateX(-50%);
+					}
+				}
+				
+				@media screen and ( max-width: 560px ) {
+					
+					&:last-child {
+						width: calc(100% - 40px);
+					}
+				}
+			}
+
+			@media screen and ( max-width: 560px ) {
+				margin-bottom: 10px;
+			}
+		}
+	}
 	
+	@media screen and ( min-width: $tablet + 1px ) {
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		position: fixed;
+		left: 0; top: 0; z-index: 15;
+		width: 100%; height: 100%;
+		background-color: white;
+		z-index: 10;
+		display: none;
+		
+		.mobile-nav-active & {
+			display: flex;
+		}
+	}
+
 	.o-btn {
 		margin-right: 5px;
-		
-		&:last-of-type {
-			//margin: 0;
+
+		@media screen and ( max-width: $tablet + px ) {
+			display: flex;
+		    justify-content: center;
+		    width: 100%;
+			height: 112px;
+			font-size: em(24);
 		}
-		
+
+		@media screen and ( max-width: 560px ) {
+			height: get-vw-560(112);
+			font-size: get-vw-560(24);
+		}
+
 		.icon-circle {
 			margin-right: 10px;
 			font-size: em(14);
 			color: $c-blue--brighter;
+			
+			@media screen and ( max-width: $tablet + px ) {
+				margin-right: 15px;
+				font-size: em(20);
+			}
+		}
+
+		.icon-list {
+			@media screen and ( max-width: $tablet + px ) {
+				margin-right: 15px;
+				font-size: em(16);
+			}
 		}
 	}
-	
+
 	.pace-done & {
 		opacity: 1;
-		transform: translateY(-50%);
+		
+		@media screen and ( min-width: $tablet + 1px ) {
+			transform: translateY(-50%);
+		}
 	}
 }
