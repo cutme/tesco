@@ -1,8 +1,41 @@
 .c-messages {
 	width: $messages + px;
 	
+	@media screen and ( min-width: $tablet + 1px ) and ( max-width: 1390px ) {
+		width: grid(800, 1390);
+	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		width: 100%;
+	}
+	
+	&__content {
+		@media screen and ( max-width: $smartphone + px ) {
+			padding-top: get-vw-640(50);
+		}
+	}
+	
+	.o-btn {
+		@media screen and ( max-width: 560px ) {
+		
+			i {
+				margin: 0;
+			}
+
+			span {
+				display: none;
+			}
+		}
+	}
+
+	.o-header__title {
+		@media screen and ( max-width: $smartphone + px ) {
+			font-size: get-vw-640(40);
+		}
+	}
+	
 	.c-page--messages & {
-		padding-top: 20px;
+		padding-top: 20px;		
 	}
 	
 	&--wide {
@@ -17,13 +50,29 @@
 			padding: 40px 60px;
 			border-bottom: 1px solid $c-gray--brighter;
 			
+			@media screen and ( max-width: $smartphone + px ) {
+				padding: get-vw-640(40) grid(40, $smartphone);
+			}
+			
 			h3 {
 				margin-bottom: 15px;
+				line-height: 1.2;
 				font: {
 					size: em(32);
 					weight: $light;
 				}
 				color: $c-blue;
+				
+				@media screen and ( max-width: $smartphone + px ) {
+					font-size: get-vw-640(32);
+				}
+			}
+			
+			p {
+				@media screen and ( max-width: $smartphone + px ) {
+					font-size: get-vw-640(20);
+				}
+				
 			}
 		}
 	}

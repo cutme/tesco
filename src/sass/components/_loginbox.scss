@@ -1,7 +1,10 @@
 .c-loginbox {
 	width: 760px;
 	height: 280px;
-	background-image: url(../img/assets/loginbox.svg);
+	background: {
+		image: url(../img/assets/loginbox.svg);
+		repeat: no-repeat;
+	}
 	padding: 60px 140px 0 80px;
 	color: white;
 	
@@ -9,7 +12,7 @@
 		width: 560px; height: 655px;
 		background: {
 			image: url(../img/assets/loginbox--vertical.svg);
-			repeat: no-repeat;
+			
 			position: center;
 		}
 		padding: 100px 40px 0 40px;
@@ -17,21 +20,17 @@
 	
 	@media screen and ( max-width: 560px ) {
 		width: 100%;
-		//height: auto;
-		//height: calc(100vh - 100px);
-		 background-size: cover;
-		//background-image: none;
-		//background-color: #0f508c;
+		height: auto;
+		background: {
+			size: cover;
+			position: center bottom;
+		}
 	}
 	
 	@media screen and ( max-width: 560px ) {
 		padding: get-vw-560(100) get-vw-560(40) 0 get-vw-560(40);
 	}
-	
-	@media screen and ( max-width: 480px ) {
-		height: auto;
-	}
-	
+
 	p {
 		@media screen and ( max-width: $tablet_portrait + px ) {
 			font-size: em(20);

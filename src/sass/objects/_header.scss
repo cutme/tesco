@@ -21,6 +21,10 @@
 	&--default {
 		padding: 20px 60px;
 		border-bottom: 1px solid $c-gray--brighter;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			padding: 20px grid(40, $smartphone);
+		}
 
 		.o-header__title {
 			color: $c-blue;
@@ -30,6 +34,11 @@
 				vertical-align: middle;
 				margin-right: 15px;
 				color: $c-blue--brighter;
+				
+				@media screen and ( max-width: $smartphone + px ) {
+					margin-right: 5px;
+					font-size: em(11);
+				}
 			}
 		}
 
@@ -39,6 +48,13 @@
 			font: {
 				size: em(14);
 				weight: $regular;
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				right: get-vw-640(40);
+				height: get-vw-640(64);
+				padding: 0 get-vw-640(30);
+				font-size: em(16);
 			}
 		}
 	}

@@ -52,52 +52,55 @@
 
 	
 	
-	<div class="c-page c-page--default">
-
-		<div class="o-wrap">
-			<div class="c-corrections">
+	<div class="o-bg o-bg--status b-lazy" data-src="img/bg/list@2x.jpg">
+		<div class="c-page anim anim--default">
 	
-				<div class="c-corrections__content">
-					<header class="o-header o-header--default">
-						<h3 class="o-header__title"><i class="icon-tools"></i> Już zgłoszone poprawki</h3>
-						
-						<a href="kokpit.html" class="o-btn o-btn--red"><i class="icon-tools"></i> Zgłoś poprawkę</a>
-					</header>
-
-					<div class="c-filters">
-						<div class="c-filters__item c-filters__item--wide">
-							<select class="nice-select">
-								<option>wszystkie kategorie</option>
-								<option>Dla ciebie</option>
-								<option>Dla rodziny</option>
-							</select>
-						</div>
-						
-						<div class="c-filters__item">
-							<div class="c-filters__item c-filters__item--short">
-								<span>Od</span> <input type="text" class="o-field" data-toggle="datepicker" id="fromDate">
+			<div class="o-wrap">
+				<div class="c-corrections">
+		
+					<div class="c-corrections__content">
+						<header class="o-header o-header--default">
+							<h3 class="o-header__title"><i class="icon-tools"></i> Już zgłoszone poprawki</h3>
+							
+							<a href="kokpit.html" class="o-btn o-btn--red"><i class="icon-tools"></i> Zgłoś poprawkę</a>
+							
+							<i class="icon-filters o-filters js-filters"></i>
+						</header>
+	
+						<div class="c-filters">
+							<div class="c-filters__item c-filters__item--wide">
+								<select class="nice-select">
+									<option>wszystkie kategorie</option>
+									<option>Dla ciebie</option>
+									<option>Dla rodziny</option>
+								</select>
 							</div>
 							
-							<div class="c-filters__item c-filters__item--short">
-								<span>do</span> <input type="text" class="o-field" data-toggle="datepicker" id="toDate">
+							<div class="c-filters__item">
+								<div class="c-filters__item c-filters__item--short">
+									<span>Od</span> <input type="text" class="o-field" data-toggle="datepicker" id="fromDate">
+								</div>
+								
+								<div class="c-filters__item c-filters__item--short">
+									<span>do</span> <input type="text" class="o-field" data-toggle="datepicker" id="toDate">
+								</div>
+							</div>
+							
+							<div class="c-filters__item c-filters__item--wide">
+								<select class="nice-select">
+									<option>najnowsze na górze</option>
+									<option>najnowsze na dole</option>
+								</select>
+							</div>
+							
+							<div class="c-filters__item c-filters__item--wide">
+								<input type="text" class="o-field" placeholder="wyszukaj poprawki">
 							</div>
 						</div>
 						
-						<div class="c-filters__item c-filters__item--wide">
-							<select class="nice-select">
-								<option>najnowsze na górze</option>
-								<option>najnowsze na dole</option>
-							</select>
-						</div>
-						
-						<div class="c-filters__item c-filters__item--wide">
-							<input type="text" class="o-field" placeholder="wyszukaj poprawki">
-						</div>
-					</div>
-					
-					<div class="c-list js-accordion" id="list">
-						<ul>
-							<li class="c-list__item">
+						<div class="c-list js-accordion" id="list">
+							<ul>
+								<li class="c-list__item">
 								<div class="c-list__row c-list__row--header">
 									<div class="c-list__name">
 										<h5>Nazwa poprawki</h5>
@@ -116,212 +119,232 @@
 									</div>
 								</div>
 							</li>
-							
-							<li class="c-list__item js-accContent">		
-								<div class="c-list__row c-list__row--body">
-									<div class="c-list__name">
-										<p class="id">885.</p>
-										<p class="name">Promocje</p>
-										<p class="date">03.09.2017</p>
-									</div>
-									
-									<div class="c-list__author">
-										Agata Zapłata
-									</div>
-
-									<div class="c-list__status">
-										<i class="icon-star"></i>
-									</div>
-									
-									<div class="c-list__votes">
-										<i class="icon-heart"></i> 12
-									</div>
-									
-									<div class="c-list__buttons">
-										<a href="#" class="o-btn o-btn--blue">Zagłosuj <i class="icon-heart"></i></a>
-										<a href="#" class="o-btn o-btn--blue rollout js-accNav">Zobacz <i class="icon-plus"></i></a>
-										<a href="#" class="o-btn o-btn--blue rollin js-accNav">Zwiń <i class="icon-minus"></i></a>
-									</div>									
-								</div>
-
-								<div class="c-list__row c-list__row--details is-hidden">
-									
-									<div class="c-list__message">
-										<i class="icon-message"></i>
-									</div>
-									
-									<div class="c-list__thumbnail">
-										<a href="#gallery-01" class="c-list__image js-openGallery">
-											<span>12</span>
-											<i class="icon-lens"></i>
-											<img src="img/assets/thumb.jpg" alt="" width="64" height="64">
-										</a>
-									</div>
-									
-									<div class="c-list__desc">
-										<p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-										</p>
-									</div>
-									
-									<div class="c-list__comment">
-										<h6>Komentarz administratora</h6>
+								
+								<li class="c-list__item js-accContent">		
+									<div class="c-list__row c-list__row--body">
+										<div class="c-list__name">
+											<p class="id">885.</p>
+											<p class="name">Promocje</p>
+											<p class="date">03.09.2017</p>
+										</div>
 										
-										<p>
-Twoje zgłoszenie zostanie przekazane do właściwego działu, aby rozważyć możliwość wprowadzenia poprawki. Gdy tylko otrzymamy odpowiedź skontaktujemy się z Tobą. Z pozdrowieniami, Koordynator Programu
-										</p>
-									</div>
-								</div>
-							</li>
-							
-							<li class="c-list__item js-accContent">
-								<div class="c-list__row c-list__row--body">
-									<div class="c-list__name">
-										<p class="id">885.</p>
-										<p class="name">Promocje</p>
-										<p class="date">03.09.2017</p>
-									</div>
-									
-									<div class="c-list__author">
-										Agata Zapłata
-									</div>
-
-									<div class="c-list__status">
-										<i class="icon-star"></i>
-									</div>
-									
-									<div class="c-list__votes">
-										<i class="icon-heart"></i> 12
-									</div>
-									
-									<div class="c-list__buttons">
-										<a href="#" class="o-btn o-btn--blue">Zagłosuj <i class="icon-heart"></i></a>
-										<a href="#" class="o-btn o-btn--blue rollout js-accNav">Zobacz <i class="icon-plus"></i></a>
-										<a href="#" class="o-btn o-btn--blue rollin js-accNav">Zwiń <i class="icon-minus"></i></a>
-									</div>									
-								</div>
-
-								<div class="c-list__row c-list__row--details is-hidden">
-									
-									<div class="c-list__message">
-										<i class="icon-message"></i>
-									</div>
-									
-									<div class="c-list__thumbnail">
-										<a href="#gallery-02" class="c-list__image js-openGallery">
-											<i>12</i>
-											<img src="img/assets/thumb.jpg" alt="" width="64" height="64">
-										</a>
-									</div>
-									
-									<div class="c-list__desc">
-										<p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-										</p>
-									</div>
-									
-									<div class="c-list__comment">
-										<h6>Komentarz administratora</h6>
+										<div class="c-list__author">
+											Agata Zapłata
+										</div>
+	
+										<div class="c-list__status">
+											<i class="icon-star"></i>
+										</div>
 										
-										<p>
-Twoje zgłoszenie zostanie przekazane do właściwego działu, aby rozważyć możliwość wprowadzenia poprawki. Gdy tylko otrzymamy odpowiedź skontaktujemy się z Tobą. Z pozdrowieniami, Koordynator Programu
-										</p>
-									</div>
-								</div>
-							</li>
-							
-							<li class="c-list__item js-accContent">
-								<div class="c-list__row c-list__row--body">
-									<div class="c-list__name">
-										<p class="id">885.</p>
-										<p class="name">Promocje</p>
-										<p class="date">03.09.2017</p>
-									</div>
-									
-									<div class="c-list__author">
-										Agata Zapłata
-									</div>
-
-									<div class="c-list__status">
-										<i class="icon-star"></i>
-									</div>
-									
-									<div class="c-list__votes">
-										<i class="icon-heart"></i> 12
-									</div>
-									
-									<div class="c-list__buttons">
-										<a href="#" class="o-btn o-btn--blue">Zagłosuj <i class="icon-heart"></i></a>
-										<a href="#" class="o-btn o-btn--blue rollout js-accNav">Zobacz <i class="icon-plus"></i></a>
-										<a href="#" class="o-btn o-btn--blue rollin js-accNav">Zwiń <i class="icon-minus"></i></a>
-									</div>									
-								</div>
-
-								<div class="c-list__row c-list__row--details is-hidden">
-									
-									<div class="c-list__message">
-										<i class="icon-message"></i>
-									</div>
-									
-									<div class="c-list__thumbnail">
-										<a href="#gallery-03" class="c-list__image js-openGallery">
-											<i>12</i>
-											<img src="img/assets/thumb.jpg" alt="" width="64" height="64">
-										</a>
-									</div>
-									
-									<div class="c-list__desc">
-										<p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-										</p>
-									</div>
-									
-									<div class="c-list__comment">
-										<h6>Komentarz administratora</h6>
+										<div class="c-list__votes">
+											<i class="icon-heart"></i> 12
+										</div>
 										
-										<p>
-Twoje zgłoszenie zostanie przekazane do właściwego działu, aby rozważyć możliwość wprowadzenia poprawki. Gdy tylko otrzymamy odpowiedź skontaktujemy się z Tobą. Z pozdrowieniami, Koordynator Programu
-										</p>
+										<div class="c-list__buttons">
+											<a href="#" class="o-btn o-btn--blue">Zagłosuj <i class="icon-heart"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollout js-accNav">Zobacz <i class="icon-plus"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollin js-accNav">Zwiń <i class="icon-minus"></i></a>
+										</div>									
 									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-					
-					<div class="c-pagination">
-						<div class="c-pagination__content">
-							<a href="#" class="prev"><i class="icon-arrow-fat--left"></i> poprzednia</a>
-							
-							<ul>
-								<li>
-									<a href="#">1</a>
-								</li><li>
-									<a href="#">2</a>
-								</li><li class="is-active">
-									<a href="#">3</a>
-								</li><li>
-									<a href="#">4</a>
-								</li><li>
-									<a href="#">5</a>
-								</li><li>
-									<a href="#">6</a>
-								</li><li>
-									<a href="#">7</a>
-								</li><li>
-									<a href="#">8</a>
-								</li><li>
-									<a href="#">9</a>
-								</li><li>
-									<a href="#">10</a>
+	
+									<div class="c-list__row c-list__row--details is-hidden">
+										
+										<div class="c-list__message">
+											<i class="icon-message"></i>
+										</div>
+										
+										<div class="c-list__thumbnail">
+											<a href="#gallery-01" class="c-list__image js-openGallery">
+												<span>12</span>
+												<i class="icon-lens"></i>
+												<img src="img/assets/thumb.jpg" alt="" width="64" height="64">
+											</a>
+										</div>
+										
+										<div class="c-list__desc">
+											<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+											</p>
+										</div>
+										
+										<div class="c-list__comment">
+											<h6>Komentarz administratora</h6>
+											
+											<p>
+	Twoje zgłoszenie zostanie przekazane do właściwego działu, aby rozważyć możliwość wprowadzenia poprawki. Gdy tylko otrzymamy odpowiedź skontaktujemy się z Tobą. Z pozdrowieniami, Koordynator Programu
+											</p>
+										</div>
+									</div>
+								</li>
+								
+								<li class="c-list__item js-accContent">
+									<div class="c-list__row c-list__row--body">
+										<div class="c-list__name">
+											<p class="id">885.</p>
+											<p class="name">Promocje</p>
+											<p class="date">03.09.2017</p>
+										</div>
+										
+										<div class="c-list__author">
+											Agata Zapłata
+										</div>
+	
+										<div class="c-list__status">
+											<i class="icon-star"></i>
+										</div>
+										
+										<div class="c-list__votes">
+											<i class="icon-heart"></i> 12
+										</div>
+										
+										<div class="c-list__buttons">
+											<a href="#" class="o-btn o-btn--blue">Zagłosuj <i class="icon-heart"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollout js-accNav">Zobacz <i class="icon-plus"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollin js-accNav">Zwiń <i class="icon-minus"></i></a>
+										</div>									
+									</div>
+	
+									<div class="c-list__row c-list__row--details is-hidden">
+										
+										<div class="c-list__message">
+											<i class="icon-message"></i>
+										</div>
+										
+										<div class="c-list__thumbnail">
+											<a href="#gallery-02" class="c-list__image js-openGallery">
+												<i>12</i>
+												<img src="img/assets/thumb.jpg" alt="" width="64" height="64">
+											</a>
+										</div>
+										
+										<div class="c-list__desc">
+											<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+											</p>
+										</div>
+										
+										<div class="c-list__comment">
+											<h6>Komentarz administratora</h6>
+											
+											<p>
+	Twoje zgłoszenie zostanie przekazane do właściwego działu, aby rozważyć możliwość wprowadzenia poprawki. Gdy tylko otrzymamy odpowiedź skontaktujemy się z Tobą. Z pozdrowieniami, Koordynator Programu
+											</p>
+										</div>
+									</div>
+								</li>
+								
+								<li class="c-list__item js-accContent">
+									<div class="c-list__row c-list__row--body">
+										<div class="c-list__name">
+											<p class="id">885.</p>
+											<p class="name">Promocje</p>
+											<p class="date">03.09.2017</p>
+										</div>
+										
+										<div class="c-list__author">
+											Agata Zapłata
+										</div>
+	
+										<div class="c-list__status">
+											<i class="icon-star"></i>
+										</div>
+										
+										<div class="c-list__votes">
+											<i class="icon-heart"></i> 12
+										</div>
+										
+										<div class="c-list__buttons">
+											<a href="#" class="o-btn o-btn--blue">Zagłosuj <i class="icon-heart"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollout js-accNav">Zobacz <i class="icon-plus"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollin js-accNav">Zwiń <i class="icon-minus"></i></a>
+										</div>									
+									</div>
+	
+									<div class="c-list__row c-list__row--details is-hidden">
+										
+										<div class="c-list__message">
+											<i class="icon-message"></i>
+										</div>
+										
+										<div class="c-list__thumbnail">
+											<a href="#gallery-03" class="c-list__image js-openGallery">
+												<i>12</i>
+												<img src="img/assets/thumb.jpg" alt="" width="64" height="64">
+											</a>
+										</div>
+										
+										<div class="c-list__desc">
+											<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+											</p>
+										</div>
+										
+										<div class="c-list__comment">
+											<h6>Komentarz administratora</h6>
+											
+											<p>
+	Twoje zgłoszenie zostanie przekazane do właściwego działu, aby rozważyć możliwość wprowadzenia poprawki. Gdy tylko otrzymamy odpowiedź skontaktujemy się z Tobą. Z pozdrowieniami, Koordynator Programu
+											</p>
+										</div>
+									</div>
 								</li>
 							</ul>
-							
-							<a href="#" class="next">następna <i class="icon-arrow-fat--right"></i></a>
 						</div>
+						
+						
+						
 					</div>
-				</div>			
+					
+					
+					<div class="c-pagination">
+				<div class="c-pagination__content">
+					<a href="#" class="prev"><i class="icon-arrow-fat--left"></i> poprzednia</a>
+					
+					<ul>
+						<li>
+							<a href="#">1</a>
+						</li><li>
+							<a href="#">2</a>
+						</li><li class="is-active">
+							<a href="#">3</a>
+						</li><li>
+							<a href="#">4</a>
+						</li><li>
+							<a href="#">5</a>
+						</li><li>
+							<a href="#">6</a>
+						</li><li>
+							<a href="#">7</a>
+						</li><li>
+							<a href="#">8</a>
+						</li><li>
+							<a href="#">9</a>
+						</li><li>
+							<a href="#">10</a>
+						</li>
+					</ul>
+					
+					<a href="#" class="next">następna <i class="icon-arrow-fat--right"></i></a>
+				</div>
 			</div>
-		</div>
+				</div>
+				
+				
+			</div>
+			
+			
+			
+		</div>		
+		
+			
+	
+	<footer class="c-footer">
+			<p class="c-footer__copy">&copy; Wszelkie prawa zastrzeżone dla Tesco Polska. <a href="#">Regulamin</a> serwisu</p>
+			<p class="c-footer__created">Created by <a href="https://roxxmedia.pl" target="_blank"><img src="img/logo/roxx.svg" alt="Roxx" width="35" height="11"></a></p>
+	</footer>
+
+
+
 	</div>
 	
 	
@@ -329,17 +352,6 @@ Twoje zgłoszenie zostanie przekazane do właściwego działu, aby rozważyć mo
 		<a href="#" class="o-btn o-btn--white weight-medium js-back"><i class="icon-arrow-fat--left"></i> <span>Powrót</span></a>
 	</div>
 
-	
-	<picture class="o-bgphoto">
-		<source 
-			media="(max-width: 768px)" 
-			srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
-			data-srcset="img/bg/login.jpg">
-		<img 
-			class="b-lazy" 
-			src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
-			data-src="img/bg/shopping@2x.jpg" alt="" width="1920" height="1000">
-	</picture>
 
 
 	<div class="c-gallery-modal" id="gallery-01">

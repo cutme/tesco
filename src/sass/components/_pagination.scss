@@ -1,4 +1,6 @@
 .c-pagination {
+	@extend %clear;
+	background-color: white;
 	padding: 25px 40px;
 	color: white;
 	

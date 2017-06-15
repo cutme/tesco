@@ -78,9 +78,9 @@
 			font-size: em(24);
 		}
 		
-		@media screen and ( max-width: 560px ) {
-			height: get-vw-560(80);
-			font-size: get-vw-560(20);
+		@media screen and ( max-width: $smartphone + px ) {
+			height: get-vw-640(80);
+			font-size: get-vw-640(20);
 		}
 	}
 	

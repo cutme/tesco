@@ -79,7 +79,7 @@
 			}
 		}
 	}
-	
+
 	@media screen and ( min-width: $tablet + 1px ) {
 		position: absolute;
 		top: 50%;
@@ -87,7 +87,7 @@
 		transform: translateY(-100%);
 		opacity: 0;
 	}
-	
+
 	@media screen and ( max-width: $tablet + px ) {
 		position: fixed;
 		left: 0; top: 0; z-index: 15;
@@ -96,8 +96,9 @@
 		z-index: 10;
 		display: none;
 		
-		.mobile-nav-active & {
+		.mobile-nav & {
 			display: flex;
+			animation: fadeInFromNone .5s ease-out;
 		}
 	}
 
