@@ -47,13 +47,14 @@
 			</nav>
 			
 			<a href="#" class="o-hamburger icon-hamburger js-nav"></a>
+			<a href="#" class="o-hamburger o-hamburger--filters icon-x js-navFilters"></a>
 		</div>
 	</div>
 
 	
 	
-	<div class="o-bg o-bg--status b-lazy" data-src="img/bg/list@2x.jpg">
-		<div class="c-page anim anim--default">
+	<div class="o-bg o-bg--login b-lazy" data-src="img/bg/list@2x.jpg">
+		<div class="c-page c-page--list anim anim--default">
 	
 			<div class="o-wrap">
 				<div class="c-corrections">
@@ -62,63 +63,84 @@
 						<header class="o-header o-header--default">
 							<h3 class="o-header__title"><i class="icon-tools"></i> Już zgłoszone poprawki</h3>
 							
-							<a href="kokpit.html" class="o-btn o-btn--red"><i class="icon-tools"></i> Zgłoś poprawkę</a>
+							<a href="kokpit.html" class="o-btn o-btn--red submit-correction"><i class="icon-tools"></i> Zgłoś poprawkę</a>
 							
 							<i class="icon-filters o-filters js-filters"></i>
 						</header>
 	
+						
 						<div class="c-filters">
-							<div class="c-filters__item c-filters__item--wide">
-								<select class="nice-select">
-									<option>wszystkie kategorie</option>
-									<option>Dla ciebie</option>
-									<option>Dla rodziny</option>
-								</select>
-							</div>
-							
-							<div class="c-filters__item">
-								<div class="c-filters__item c-filters__item--short">
-									<span>Od</span> <input type="text" class="o-field" data-toggle="datepicker" id="fromDate">
-								</div>
+							<div class="c-filters__overlay">
+								<div class="c-filters__content">
+
+									<header class="o-header">
+										<h3 class="o-header__title">Filtruj listę poprawek</a></h3>
+									</header>
+									
+									<div class="c-filters__item c-filters__item--wide">
+										<select class="nice-select">
+											<option>wszystkie kategorie</option>
+											<option>Dla ciebie</option>
+											<option>Dla rodziny</option>
+										</select>
+									</div>
+									
+									<div class="c-filters__item c-filters__item--datepickerSort">
+										<div class="c-filters__item c-filters__item--datepickers">
+											<div class="c-filters__item c-filters__item--short">
+												<span>Od</span> <input type="text" class="o-field" data-toggle="datepicker" id="fromDate">
+											</div>
+											
+											<div class="c-filters__item c-filters__item--short">
+												<span>do</span> <input type="text" class="o-field" data-toggle="datepicker" id="toDate">
+											</div>
+										</div>
+									
+										<div class="c-filters__item c-filters__item--wide">
+											<select class="nice-select">
+												<option>najnowsze na górze</option>
+												<option>najnowsze na dole</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="c-filters__item c-filters__item--submit">
+										<button type="submit" class="o-btn o-btn--blue">
+											<span><i class="icon-filters"></i> Zastosuj filtry</span>
+										</button>
+									</div>
 								
-								<div class="c-filters__item c-filters__item--short">
-									<span>do</span> <input type="text" class="o-field" data-toggle="datepicker" id="toDate">
 								</div>
 							</div>
-							
-							<div class="c-filters__item c-filters__item--wide">
-								<select class="nice-select">
-									<option>najnowsze na górze</option>
-									<option>najnowsze na dole</option>
-								</select>
-							</div>
-							
-							<div class="c-filters__item c-filters__item--wide">
+
+
+							<div class="c-filters__item c-filters__item--search">
 								<input type="text" class="o-field" placeholder="wyszukaj poprawki">
 							</div>
 						</div>
+
 						
 						<div class="c-list js-accordion" id="list">
 							<ul>
 								<li class="c-list__item">
-								<div class="c-list__row c-list__row--header">
-									<div class="c-list__name">
-										<h5>Nazwa poprawki</h5>
+									<div class="c-list__row c-list__row--header">
+										<div class="c-list__name">
+											<h5>Nazwa poprawki</h5>
+										</div>
+										
+										<div class="c-list__author">
+											<h5>Autor</h5>
+										</div>
+										
+										<div class="c-list__status">
+											<h5><i class="icon-circle"></i> Status</h5>
+										</div>
+										
+										<div class="c-list__votes">
+											<h5>Oddane głosy</h5>
+										</div>
 									</div>
-									
-									<div class="c-list__author">
-										<h5>Autor</h5>
-									</div>
-									
-									<div class="c-list__status">
-										<h5><i class="icon-circle"></i> Status</h5>
-									</div>
-									
-									<div class="c-list__votes">
-										<h5>Oddane głosy</h5>
-									</div>
-								</div>
-							</li>
+								</li>
 								
 								<li class="c-list__item js-accContent">		
 									<div class="c-list__row c-list__row--body">
@@ -137,13 +159,13 @@
 										</div>
 										
 										<div class="c-list__votes">
-											<i class="icon-heart"></i> 12
+											<i class="icon-heart"></i> <span>12</span>
 										</div>
 										
 										<div class="c-list__buttons">
-											<a href="#" class="o-btn o-btn--blue">Zagłosuj <i class="icon-heart"></i></a>
-											<a href="#" class="o-btn o-btn--blue rollout js-accNav">Zobacz <i class="icon-plus"></i></a>
-											<a href="#" class="o-btn o-btn--blue rollin js-accNav">Zwiń <i class="icon-minus"></i></a>
+											<a href="#" class="o-btn o-btn--blue vote"><span>Zagłosuj</span> <i class="icon-heart"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollout js-accNav"><span>Zobacz</span> <i class="icon-plus"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollin js-accNav"><span>Zwiń</span> <i class="icon-minus"></i></a>
 										</div>									
 									</div>
 	
@@ -194,13 +216,13 @@
 										</div>
 										
 										<div class="c-list__votes">
-											<i class="icon-heart"></i> 12
+											<i class="icon-heart"></i> <span>12</span>
 										</div>
 										
 										<div class="c-list__buttons">
-											<a href="#" class="o-btn o-btn--blue">Zagłosuj <i class="icon-heart"></i></a>
-											<a href="#" class="o-btn o-btn--blue rollout js-accNav">Zobacz <i class="icon-plus"></i></a>
-											<a href="#" class="o-btn o-btn--blue rollin js-accNav">Zwiń <i class="icon-minus"></i></a>
+											<a href="#" class="o-btn o-btn--blue vote"><span>Zagłosuj</span> <i class="icon-heart"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollout js-accNav"><span>Zobacz</span> <i class="icon-plus"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollin js-accNav"><span>Zwiń</span> <i class="icon-minus"></i></a>
 										</div>									
 									</div>
 	
@@ -212,7 +234,7 @@
 										
 										<div class="c-list__thumbnail">
 											<a href="#gallery-02" class="c-list__image js-openGallery">
-												<i>12</i>
+												<i><span>12</span></i>
 												<img src="img/assets/thumb.jpg" alt="" width="64" height="64">
 											</a>
 										</div>
@@ -250,13 +272,13 @@
 										</div>
 										
 										<div class="c-list__votes">
-											<i class="icon-heart"></i> 12
+											<i class="icon-heart"></i> <span>12</span>
 										</div>
 										
 										<div class="c-list__buttons">
-											<a href="#" class="o-btn o-btn--blue">Zagłosuj <i class="icon-heart"></i></a>
-											<a href="#" class="o-btn o-btn--blue rollout js-accNav">Zobacz <i class="icon-plus"></i></a>
-											<a href="#" class="o-btn o-btn--blue rollin js-accNav">Zwiń <i class="icon-minus"></i></a>
+											<a href="#" class="o-btn o-btn--blue vote"><span>Zagłosuj</span> <i class="icon-heart"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollout js-accNav"><span>Zobacz</span> <i class="icon-plus"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollin js-accNav"><span>Zwiń</span> <i class="icon-minus"></i></a>
 										</div>									
 									</div>
 	
@@ -268,7 +290,7 @@
 										
 										<div class="c-list__thumbnail">
 											<a href="#gallery-03" class="c-list__image js-openGallery">
-												<i>12</i>
+												<i><span>12</span></i>
 												<img src="img/assets/thumb.jpg" alt="" width="64" height="64">
 											</a>
 										</div>
@@ -297,36 +319,36 @@
 					
 					
 					<div class="c-pagination">
-				<div class="c-pagination__content">
-					<a href="#" class="prev"><i class="icon-arrow-fat--left"></i> poprzednia</a>
-					
-					<ul>
-						<li>
-							<a href="#">1</a>
-						</li><li>
-							<a href="#">2</a>
-						</li><li class="is-active">
-							<a href="#">3</a>
-						</li><li>
-							<a href="#">4</a>
-						</li><li>
-							<a href="#">5</a>
-						</li><li>
-							<a href="#">6</a>
-						</li><li>
-							<a href="#">7</a>
-						</li><li>
-							<a href="#">8</a>
-						</li><li>
-							<a href="#">9</a>
-						</li><li>
-							<a href="#">10</a>
-						</li>
-					</ul>
-					
-					<a href="#" class="next">następna <i class="icon-arrow-fat--right"></i></a>
-				</div>
-			</div>
+						<div class="c-pagination__content">
+							<a href="#" class="prev"><i class="icon-arrow-fat--left"></i> <span>poprzednia</span></a>
+							
+							<ul>
+								<li>
+									<a href="#">1</a>
+								</li><li>
+									<a href="#">2</a>
+								</li><li class="is-active">
+									<a href="#">3</a>
+								</li><li>
+									<a href="#">4</a>
+								</li><li>
+									<a href="#">5</a>
+								</li><li>
+									<a href="#">6</a>
+								</li><li>
+									<a href="#">7</a>
+								</li><li>
+									<a href="#">8</a>
+								</li><li>
+									<a href="#">9</a>
+								</li><li>
+									<a href="#">10</a>
+								</li>
+							</ul>
+							
+							<a href="#" class="next"><span>następna</span> <i class="icon-arrow-fat--right"></i></a>
+						</div>
+					</div>
 				</div>
 				
 				
@@ -348,7 +370,7 @@
 	</div>
 	
 	
-	<div class="c-navbtn c-navbtn--prev">
+	<div class="c-navbtn c-navbtn--list c-navbtn--prev">
 		<a href="#" class="o-btn o-btn--white weight-medium js-back"><i class="icon-arrow-fat--left"></i> <span>Powrót</span></a>
 	</div>
 
@@ -356,27 +378,18 @@
 
 	<div class="c-gallery-modal" id="gallery-01">
 		<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg"></a>
-		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg"></a>
+		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c<span>12</span>84f_b.jpg"></a>
 	</div>
 	
 	<div class="c-gallery-modal" id="gallery-02">
 		<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg"></a>
-		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg"></a>
+		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c<span>12</span>84f_b.jpg"></a>
 	</div>
 	
 	<div class="c-gallery-modal" id="gallery-03">
 		<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg"></a>
-		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg"></a>
+		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c<span>12</span>84f_b.jpg"></a>
 	</div>
-
-
-		
-	
-	<footer class="c-footer">
-			<p class="c-footer__copy">&copy; Wszelkie prawa zastrzeżone dla Tesco Polska. <a href="#">Regulamin</a> serwisu</p>
-			<p class="c-footer__created">Created by <a href="https://roxxmedia.pl" target="_blank"><img src="img/logo/roxx.svg" alt="Roxx" width="35" height="11"></a></p>
-	</footer>
-
 
 
 	
