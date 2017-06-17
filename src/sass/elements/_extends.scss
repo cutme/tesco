@@ -198,12 +198,20 @@
 %wrap {
 	@extend %rel;
 	margin: 0 auto;
-	max-width: $base + 40 + px;
+	width: $base + 40px;
 	height: 100%; 
 	margin: 0 auto;	
 	padding: {
 		left: 20px;
 		right: 20px;
+	}
+	
+	@media screen and ( max-width: $base + 40px ) {
+		width: 100%;
+	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		padding: 0;
 	}
 }
 

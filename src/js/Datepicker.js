@@ -18,7 +18,7 @@
 		  }
 		})(function ($) {
 		
-		  'use strict';
+//		  'use strict';
 		
 		  $.fn.datepicker.languages['pl-PL'] = {
 		    format: 'dd.mm.YYYY',
@@ -31,8 +31,14 @@
 		    monthsShort: ['Sty', 'Lut', 'Mar', 'Kwi', 'Maj', 'Cze', 'Lip', 'Sie', 'Wrz', 'Paź', 'Lis', 'Gru']
 		  };
 		});	
-		
-	
+
+
+		$('#toDate').datepicker({
+			autoHide: true,
+			autoPick: true,
+			language: 'pl-PL'
+		});
+
 		$('#fromDate').datepicker({
 			autoHide: true,
 			autoPick: true,
@@ -48,7 +54,7 @@
 
 			$('#toDate').datepicker('setDate', e.date);
 			
-		});;
+		});
 	};
 
 	tesco.Datepicker = new Datepicker();

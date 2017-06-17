@@ -19,11 +19,13 @@
 		}
 	}
 	
+/*
 	&--list {
 		@media screen and ( max-width: $tablet_portrait + px ) {
-			background-image: url(../img/bg/list.jpg) !important;
+			//background-image: url(../img/bg/list.jpg) !important;
 		}
 	}
+*/
 
 	&--login {
 		@media screen and ( max-width: $tablet_portrait + px ) {

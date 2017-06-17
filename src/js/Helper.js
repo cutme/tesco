@@ -18,8 +18,7 @@
     	el.on('click', function(e) {
 	    	e.preventDefault();
 	    	history.back();
-    	})
-	    
+    	});
     }
 
 	function blazy() {

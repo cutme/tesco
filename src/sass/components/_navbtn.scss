@@ -7,7 +7,7 @@
 	transform: translateX(-100%);
 	opacity: 0;
 	
-	@media screen and ( max-width: $base + px ) {
+	@media screen and ( max-width: $tablet + px ) {
 		left: 20px;
 	}
 	
@@ -24,9 +24,7 @@
 			span {
 				display: none;
 			}
-			//font-size: get-vw-560(20);
 		}
-		
 		
 		.icon-arrow-fat--left {
 			&:before {
@@ -38,6 +36,14 @@
 	.pace-done & {
 		transform: translateX(0);
 		opacity: 1;
+	}
+	
+	&--list {
+		left: calc((100% - 1200px)/2);
+		
+		@media screen and ( max-width: $base + 40px ) {
+			left: 20px;
+		}
 	}
 	
 	&--messages {
@@ -67,5 +73,9 @@
 				}
 			}
 		}
+	}
+	
+	.nav-filters & {
+		display: none;
 	}
 }

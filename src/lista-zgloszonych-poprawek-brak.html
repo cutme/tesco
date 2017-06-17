@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+@@include('./includes/head.html')
+<body>
+
+
+	@@include('./includes/top-logged.html')
+	
+	
+	<div class="o-bg o-bg--login b-lazy" data-src="img/bg/list@2x.jpg">
+		<div class="c-page c-page--list anim anim--default">
+
+			<div class="o-wrap">
+				<div class="c-corrections">
+		
+					<div class="c-corrections__content">
+						<header class="o-header o-header--default">
+							<h3 class="o-header__title"><i class="icon-tools"></i> Już zgłoszone poprawki</h3>
+							
+							<a href="kokpit.html" class="o-btn o-btn--red submit-correction"><i class="icon-tools"></i> Zgłoś poprawkę</a>
+							
+							<i class="icon-filters o-filters js-filters"></i>
+						</header>
+
+
+						@@include('./includes/filters.html')
+
+
+						<div class="c-list c-list--empty">
+							<div class="c-list__empty">
+								<i class="icon-empty-document"></i>
+								<p>Brak poprawek dla wybranych kryteriów</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+		</div>		
+		
+		@@include('./includes/footer.html')
+	</div>
+	
+	
+	<div class="c-navbtn c-navbtn--list c-navbtn--prev">
+		<a href="#" class="o-btn o-btn--white weight-medium js-back"><i class="icon-arrow-fat--left"></i> <span>Powrót</span></a>
+	</div>
+
+
+
+	<div class="c-gallery-modal" id="gallery-01">
+		<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg"></a>
+		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg"></a>
+	</div>
+	
+	<div class="c-gallery-modal" id="gallery-02">
+		<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg"></a>
+		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg"></a>
+	</div>
+	
+	<div class="c-gallery-modal" id="gallery-03">
+		<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg"></a>
+		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg"></a>
+	</div>
+
+
+
+	@@include('./includes/scripts.html')
+
+</body>
+</html>

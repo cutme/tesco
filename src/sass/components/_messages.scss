@@ -1,9 +1,9 @@
 .c-messages {
 	width: $messages + px;
 	
-	@media screen and ( min-width: $tablet + 1px ) and ( max-width: 1390px ) {
-		width: grid(800, 1390);
-	}
+	//@media screen and ( min-width: $tablet + 1px ) and ( max-width: 1390px ) {
+		//width: grid(800, 1390);
+	//}
 	
 	@media screen and ( max-width: $tablet + px ) {
 		width: 100%;
@@ -35,7 +35,9 @@
 	}
 	
 	.c-page--messages & {
-		padding-top: 20px;		
+		@media screen and ( min-width: $tablet + 1px ) {
+			padding-top: 20px;
+		}
 	}
 	
 	&--wide {
@@ -73,6 +75,18 @@
 					font-size: get-vw-640(20);
 				}
 				
+			}
+		}
+		
+		.c-page--messages & {
+			@media screen and ( max-width: $tablet + px ) {
+				padding-top: 20px;
+			}
+		}
+
+		.c-page--dashboard & {		
+			@media screen and ( max-width: $tablet + px ) {
+				padding-top: 50px;
 			}
 		}
 	}

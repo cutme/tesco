@@ -1,14 +1,57 @@
 .c-list {
+	@extend %rel;
 	color: $c-blue;
+
+	&--empty {
+		min-height: 50vh;
+		text-align: center;
+	}
+
+	&__empty {
+		@extend %abs;
+		left: 0; top: 50%;
+		transform: translateY(-100%);
+		width: 100%;
+		text-align: center;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			padding: 0 40px;
+		}
+
+		.icon-empty-document {
+		    display: inline-block;
+			margin-bottom: 15px;
+		    font-size: 60px;
+			color: $c-blue--brighter;
+		}
+		
+		p {
+			font-size: em(16);
+			color: #00539f;
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: em(14);
+			}
+			
+		}
+		
+	}
 	
 	&__author {
-		width: 220px;
+		width: grid(220, $base - 80);
+
+		@media screen and ( max-width: $smartphone + px ) {
+			display: none;
+		}
 	}
 
 	&__buttons {
 		@extend %flex;
-		width: 260px;
 		justify-content: space-between;
+		
+		@media screen and ( min-width: $smartphone + 1px ) {
+			width: grid(260, $base - 80);
+		}
 		
 		.o-btn {
 			display: flex;
@@ -31,11 +74,26 @@
 				    color: white;
 			    }
 		    }
+		    
+		    @media screen and ( max-width: $tablet + px ) {
+				span {
+					display: none;
+				}
+				
+				i {
+					margin: 0;	
+				}
+			}
 		}
+		
 		
 		
 		.rollin {
 			display: none;
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				display: none;
+			}
 			
 			.is-active & {
 				display: flex;
@@ -43,9 +101,31 @@
 		}
 		
 		.rollout {
-			display: flex;
+			display: flex;			
+
+			@media screen and ( max-width: $smartphone + px ) {
+				display: flex;
+				width: 64px; height: 64px;	
+				color: white;
+
+				span {
+					display: none;
+					
+				}
+			}
+			
+			@media screen and ( max-width: 560px ) {
+				width: get-vw-560(64);
+				height: get-vw-560(64);
+			}
 			
 			.is-active & {
+				display: none;
+			}
+		}
+		
+		.vote {
+			@media screen and ( max-width: $smartphone + px ) {
 				display: none;
 			}
 		}
@@ -128,8 +208,22 @@
 	    background-color: white;
 	    padding: 15px 0;
 	    
+	    @media screen and ( max-width: $smartphone + px ) {
+	    	padding: 35px 0;
+	    }
+	    
+		@media screen and ( max-width: 560px ) {
+			padding: get-vw-560(35) 0;
+		}
+	    
 	    &:nth-child(even) {
 			background-color: #d4edfc;
+		}
+		
+		&:first-child {
+		    @media screen and ( max-width: $tablet + px ) {
+				display: none;
+			}
 		}
 		
 	    &.is-active {
@@ -143,8 +237,10 @@
 	}
 	
 	&__name {
-		width: 360px;
-		
+		@media screen and ( min-width: $smartphone + 1px ) {
+			width: grid(360, $base - 80);
+		}
+
 		.date,
 		.id {
 			font-size: em(12);
@@ -160,25 +256,53 @@
 				weight: $bold;
 			}
 		}
+		
+		.date {
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: em(16);
+			}
+			
+			@media screen and ( max-width: 560px ) {
+				font-size: get-vw-560(16);
+			}
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			.id, .name {
+				display: inline;
+				font-size: em(20);
+			}
+		}
+		
+		@media screen and ( max-width: 560px) {
+			.id, .name {
+				font-size: get-vw-560(20);
+			}
+		}
 	}
 	
 	&__row {
 		@extend %flex;
 		align-items: center;
+		width: 100%;
 		padding: 0 40px;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			padding: 0 grid(40, $smartphone);
+		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			justify-content: space-between;
+		}
 		
 		&--details {
 			padding: {
 				top: 40px;
 				bottom: 20px;
-			}
-			
-			
+			}			
 			
 			.is-active & {
-				//animation: fadeInFromNone;
 				animation: fadeInFromNone .5s ease-out;
-				//display: flex;
 			}
 		}
 		
@@ -201,7 +325,9 @@
 	}
 	
 	&__status {
-		width: 180px;
+		@media screen and ( min-width: $tablet + 1px ) {
+			width: grid(180, $base - 80);
+		}
 	}
 
 	&__thumbnail {
@@ -210,11 +336,31 @@
 	}
 
 	&__votes {
-		width: 100px;
+		@media screen and ( min-width: $smartphone + 1px ) {
+			width: grid(100, $base - 80);
+		}
+		
+		span {
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: em(20);
+			}
+			
+			@media screen and ( max-width: 560px) {
+				font-size: get-vw-560(20);
+			}
+		}
+		
+		.c-list__row--header & {
+			width: grid(360, $base - 80);
+		}
 
 		.icon-heart {
 			margin-right: 4px;
 			color: $c-blue--brighter;
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: em(20);				
+			}
 		}
 	}
 
@@ -238,6 +384,11 @@
 	.icon-star {
 		font-size: em(16);
 		color: $c-yellow;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			font-size: em(23);
+		}
+		
 	}
 	
 	.icon-x-2 {

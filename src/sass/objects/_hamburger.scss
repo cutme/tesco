@@ -5,14 +5,34 @@
 	right: 40px;
 	font-size: em(40);
 	color: #00529f;
-	
+
 	@media screen and ( max-width: $tablet + 1px ) {
 		display: block;
 	}
-	
+
 	@media screen and ( max-width: 560px ) {
 		right: get-vw-560(40);
 		font-size: get-vw-560(40);
+	}
+
+	&.icon-hamburger {
+		.nav-filters & {
+			display: none;
+		}
+	}
+
+	&.icon-x {
+		display: none;
+
+		.nav-filters & {
+			display: block;
+			font-size: em(32);
+			color: $c-blue--brighter;
+			
+			@media screen and ( max-width: 560px ) {
+				font-size: get-vw-560(32);
+			}
+		}
 	}
 
 	.mobile-nav & {

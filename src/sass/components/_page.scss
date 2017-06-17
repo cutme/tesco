@@ -33,6 +33,16 @@
 		}	    
 	}
 	
+	&--list {		
+		@media screen and ( max-width: $tablet + px ) {
+			padding-top: 100px;
+		}
+		
+		@media screen and ( max-width: 560px ) {
+			padding-top: get-vw-560(100);
+		}
+	}
+	
 	&--login {		
 		@media screen and ( max-width: 560px ) {
 			padding-top: get-vw-560(100);
@@ -41,6 +51,15 @@
 		@media screen and ( min-width: 561px ) {
 			align-items: center;
 		}
+	}
+	
+	&--messages {		
+		@media screen and ( max-width: $tablet + px ) {
+			padding-top: 100px;
+		}
 		
+		@media screen and ( min-width: 561px ) {
+			//align-items: center;
+		}
 	}
 }

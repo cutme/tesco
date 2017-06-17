@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="pl">
-@@include('./includes/head.html')
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="robots" content="noindex">
+	<meta charset="UTF-8">
+
+	<title>Tesco</title>
+
+	<!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+
+	<link href="css/libs.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
 <body>
 
 
-	@@include('./includes/top-logged.html')
+		
+	<div class="c-top">
+		<div class="o-wrap">
+			<a href="logowanie.html" class="c-logo">
+				<img src="img/logo/tesco.svg" alt="Tesco" width="138" height="61">
+			</a>
+			
+			<nav class="c-nav js-menu">
+				<ul>
+					<li>
+						<a href="sprawdz-status.html" class="o-btn o-btn--blue"><i class="icon-circle"></i> Sprawdź status</a>
+					</li>
+					
+					<li>
+						<a href="lista-zgloszonych-poprawek.html" class="o-btn o-btn--blue"><i class="icon-list"></i> Lista zgłoszonych poprawek</a>
+					</li>
+					
+					<li>
+						<a href="logowanie.html" class="o-btn o-btn--blue-border"><i class="icon-power"></i> Wyloguj</a>
+					</li>
+				</ul>				
+			</nav>
+			
+			<a href="#" class="o-hamburger icon-hamburger js-nav"></a>
+		</div>
+	</div>
+
 	
 	
-	<div class="o-bg o-bg--login b-lazy" data-src="img/bg/list@2x.jpg">
-		<div class="c-page c-page--list anim anim--default">
+	<div class="o-bg o-bg--status b-lazy" data-src="img/bg/list@2x.jpg">
+		<div class="c-page anim anim--default">
 	
 			<div class="o-wrap">
 				<div class="c-corrections">
@@ -17,34 +62,63 @@
 						<header class="o-header o-header--default">
 							<h3 class="o-header__title"><i class="icon-tools"></i> Już zgłoszone poprawki</h3>
 							
-							<a href="kokpit.html" class="o-btn o-btn--red submit-correction"><i class="icon-tools"></i> Zgłoś poprawkę</a>
+							<a href="kokpit.html" class="o-btn o-btn--red"><i class="icon-tools"></i> Zgłoś poprawkę</a>
 							
 							<i class="icon-filters o-filters js-filters"></i>
 						</header>
 	
-						@@include('./includes/filters.html')
+						<div class="c-filters">
+							<div class="c-filters__item c-filters__item--wide">
+								<select class="nice-select">
+									<option>wszystkie kategorie</option>
+									<option>Dla ciebie</option>
+									<option>Dla rodziny</option>
+								</select>
+							</div>
+							
+							<div class="c-filters__item">
+								<div class="c-filters__item c-filters__item--short">
+									<span>Od</span> <input type="text" class="o-field" data-toggle="datepicker" id="fromDate">
+								</div>
+								
+								<div class="c-filters__item c-filters__item--short">
+									<span>do</span> <input type="text" class="o-field" data-toggle="datepicker" id="toDate">
+								</div>
+							</div>
+							
+							<div class="c-filters__item c-filters__item--wide">
+								<select class="nice-select">
+									<option>najnowsze na górze</option>
+									<option>najnowsze na dole</option>
+								</select>
+							</div>
+							
+							<div class="c-filters__item c-filters__item--wide">
+								<input type="text" class="o-field" placeholder="wyszukaj poprawki">
+							</div>
+						</div>
 						
 						<div class="c-list js-accordion" id="list">
 							<ul>
 								<li class="c-list__item">
-									<div class="c-list__row c-list__row--header">
-										<div class="c-list__name">
-											<h5>Nazwa poprawki</h5>
-										</div>
-										
-										<div class="c-list__author">
-											<h5>Autor</h5>
-										</div>
-										
-										<div class="c-list__status">
-											<h5><i class="icon-circle"></i> Status</h5>
-										</div>
-										
-										<div class="c-list__votes">
-											<h5>Oddane głosy</h5>
-										</div>
+								<div class="c-list__row c-list__row--header">
+									<div class="c-list__name">
+										<h5>Nazwa poprawki</h5>
 									</div>
-								</li>
+									
+									<div class="c-list__author">
+										<h5>Autor</h5>
+									</div>
+									
+									<div class="c-list__status">
+										<h5><i class="icon-circle"></i> Status</h5>
+									</div>
+									
+									<div class="c-list__votes">
+										<h5>Oddane głosy</h5>
+									</div>
+								</div>
+							</li>
 								
 								<li class="c-list__item js-accContent">		
 									<div class="c-list__row c-list__row--body">
@@ -63,13 +137,13 @@
 										</div>
 										
 										<div class="c-list__votes">
-											<i class="icon-heart"></i> <span>12</span>
+											<i class="icon-heart"></i> 12
 										</div>
 										
 										<div class="c-list__buttons">
-											<a href="#" class="o-btn o-btn--blue vote"><span>Zagłosuj</span> <i class="icon-heart"></i></a>
-											<a href="#" class="o-btn o-btn--blue rollout js-accNav"><span>Zobacz</span> <i class="icon-plus"></i></a>
-											<a href="#" class="o-btn o-btn--blue rollin js-accNav"><span>Zwiń</span> <i class="icon-minus"></i></a>
+											<a href="#" class="o-btn o-btn--blue">Zagłosuj <i class="icon-heart"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollout js-accNav">Zobacz <i class="icon-plus"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollin js-accNav">Zwiń <i class="icon-minus"></i></a>
 										</div>									
 									</div>
 	
@@ -120,13 +194,13 @@
 										</div>
 										
 										<div class="c-list__votes">
-											<i class="icon-heart"></i> <span>12</span>
+											<i class="icon-heart"></i> 12
 										</div>
 										
 										<div class="c-list__buttons">
-											<a href="#" class="o-btn o-btn--blue vote"><span>Zagłosuj</span> <i class="icon-heart"></i></a>
-											<a href="#" class="o-btn o-btn--blue rollout js-accNav"><span>Zobacz</span> <i class="icon-plus"></i></a>
-											<a href="#" class="o-btn o-btn--blue rollin js-accNav"><span>Zwiń</span> <i class="icon-minus"></i></a>
+											<a href="#" class="o-btn o-btn--blue">Zagłosuj <i class="icon-heart"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollout js-accNav">Zobacz <i class="icon-plus"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollin js-accNav">Zwiń <i class="icon-minus"></i></a>
 										</div>									
 									</div>
 	
@@ -138,7 +212,7 @@
 										
 										<div class="c-list__thumbnail">
 											<a href="#gallery-02" class="c-list__image js-openGallery">
-												<i><span>12</span></i>
+												<i>12</i>
 												<img src="img/assets/thumb.jpg" alt="" width="64" height="64">
 											</a>
 										</div>
@@ -176,13 +250,13 @@
 										</div>
 										
 										<div class="c-list__votes">
-											<i class="icon-heart"></i> <span>12</span>
+											<i class="icon-heart"></i> 12
 										</div>
 										
 										<div class="c-list__buttons">
-											<a href="#" class="o-btn o-btn--blue vote"><span>Zagłosuj</span> <i class="icon-heart"></i></a>
-											<a href="#" class="o-btn o-btn--blue rollout js-accNav"><span>Zobacz</span> <i class="icon-plus"></i></a>
-											<a href="#" class="o-btn o-btn--blue rollin js-accNav"><span>Zwiń</span> <i class="icon-minus"></i></a>
+											<a href="#" class="o-btn o-btn--blue">Zagłosuj <i class="icon-heart"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollout js-accNav">Zobacz <i class="icon-plus"></i></a>
+											<a href="#" class="o-btn o-btn--blue rollin js-accNav">Zwiń <i class="icon-minus"></i></a>
 										</div>									
 									</div>
 	
@@ -194,7 +268,7 @@
 										
 										<div class="c-list__thumbnail">
 											<a href="#gallery-03" class="c-list__image js-openGallery">
-												<i><span>12</span></i>
+												<i>12</i>
 												<img src="img/assets/thumb.jpg" alt="" width="64" height="64">
 											</a>
 										</div>
@@ -224,7 +298,7 @@
 					
 					<div class="c-pagination">
 						<div class="c-pagination__content">
-							<a href="#" class="prev"><i class="icon-arrow-fat--left"></i> <span>poprzednia</span></a>
+							<a href="#" class="prev"><i class="icon-arrow-fat--left"></i> poprzednia</a>
 							
 							<ul>
 								<li>
@@ -250,7 +324,7 @@
 								</li>
 							</ul>
 							
-							<a href="#" class="next"><span>następna</span> <i class="icon-arrow-fat--right"></i></a>
+							<a href="#" class="next">następna <i class="icon-arrow-fat--right"></i></a>
 						</div>
 					</div>
 				</div>
@@ -262,11 +336,19 @@
 			
 		</div>		
 		
-		@@include('./includes/footer.html')
+			
+	
+	<footer class="c-footer">
+			<p class="c-footer__copy">&copy; Wszelkie prawa zastrzeżone dla Tesco Polska. <a href="#">Regulamin</a> serwisu</p>
+			<p class="c-footer__created">Created by <a href="https://roxxmedia.pl" target="_blank"><img src="img/logo/roxx.svg" alt="Roxx" width="35" height="11"></a></p>
+	</footer>
+
+
+
 	</div>
 	
 	
-	<div class="c-navbtn c-navbtn--list c-navbtn--prev">
+	<div class="c-navbtn c-navbtn--prev">
 		<a href="#" class="o-btn o-btn--white weight-medium js-back"><i class="icon-arrow-fat--left"></i> <span>Powrót</span></a>
 	</div>
 
@@ -274,21 +356,33 @@
 
 	<div class="c-gallery-modal" id="gallery-01">
 		<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg"></a>
-		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c<span>12</span>84f_b.jpg"></a>
+		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg"></a>
 	</div>
 	
 	<div class="c-gallery-modal" id="gallery-02">
 		<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg"></a>
-		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c<span>12</span>84f_b.jpg"></a>
+		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg"></a>
 	</div>
 	
 	<div class="c-gallery-modal" id="gallery-03">
 		<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg"></a>
-		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c<span>12</span>84f_b.jpg"></a>
+		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg"></a>
 	</div>
 
 
-	@@include('./includes/scripts.html')
+		
+	
+	<footer class="c-footer">
+			<p class="c-footer__copy">&copy; Wszelkie prawa zastrzeżone dla Tesco Polska. <a href="#">Regulamin</a> serwisu</p>
+			<p class="c-footer__created">Created by <a href="https://roxxmedia.pl" target="_blank"><img src="img/logo/roxx.svg" alt="Roxx" width="35" height="11"></a></p>
+	</footer>
+
+
+
+	
+<script src="js/libs.js"></script>
+<script src="js/script.js"></script>
+
 
 </body>
 </html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="robots" content="noindex">
+	<meta charset="UTF-8">
+
+	<title>Tesco</title>
+
+	<!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+
+	<link href="css/libs.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+		
+	<div class="c-top">
+		<div class="o-wrap">
+			<a href="logowanie.html" class="c-logo">
+				<img src="img/logo/tesco.svg" alt="Tesco" width="138" height="61">
+			</a>
+			
+			<nav class="c-nav js-menu">
+				<ul>
+					<li>
+						<a href="sprawdz-status.html" class="o-btn o-btn--blue"><i class="icon-circle"></i> Sprawdź status</a>
+					</li>
+					
+					<li>
+						<a href="lista-zgloszonych-poprawek.html" class="o-btn o-btn--blue"><i class="icon-list"></i> Lista zgłoszonych poprawek</a>
+					</li>
+					
+					<li>
+						<a href="logowanie.html" class="o-btn o-btn--blue-border"><i class="icon-power"></i> Wyloguj</a>
+					</li>
+				</ul>				
+			</nav>
+			
+			<a href="#" class="o-hamburger icon-hamburger js-nav"></a>
+			<a href="#" class="o-hamburger o-hamburger--filters icon-x js-navFilters"></a>
+		</div>
+	</div>
+
+	
+	
+	<div class="o-bg o-bg--login b-lazy" data-src="img/bg/list@2x.jpg">
+		<div class="c-page c-page--list anim anim--default">
+
+			<div class="o-wrap">
+				<div class="c-corrections">
+		
+					<div class="c-corrections__content">
+						<header class="o-header o-header--default">
+							<h3 class="o-header__title"><i class="icon-tools"></i> Już zgłoszone poprawki</h3>
+							
+							<a href="kokpit.html" class="o-btn o-btn--red submit-correction"><i class="icon-tools"></i> Zgłoś poprawkę</a>
+							
+							<i class="icon-filters o-filters js-filters"></i>
+						</header>
+
+
+						
+						<div class="c-filters">
+							<div class="c-filters__overlay">
+								<div class="c-filters__content">
+
+									<header class="o-header">
+										<h3 class="o-header__title">Filtruj listę poprawek</a></h3>
+									</header>
+									
+									<div class="c-filters__item c-filters__item--wide">
+										<select class="nice-select">
+											<option>wszystkie kategorie</option>
+											<option>Dla ciebie</option>
+											<option>Dla rodziny</option>
+										</select>
+									</div>
+									
+									<div class="c-filters__item c-filters__item--datepickerSort">
+										<div class="c-filters__item c-filters__item--datepickers">
+											<div class="c-filters__item c-filters__item--short">
+												<span>Od</span> <input type="text" class="o-field" data-toggle="datepicker" id="fromDate">
+											</div>
+											
+											<div class="c-filters__item c-filters__item--short">
+												<span>do</span> <input type="text" class="o-field" data-toggle="datepicker" id="toDate">
+											</div>
+										</div>
+									
+										<div class="c-filters__item c-filters__item--wide">
+											<select class="nice-select">
+												<option>najnowsze na górze</option>
+												<option>najnowsze na dole</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="c-filters__item c-filters__item--submit">
+										<button type="submit" class="o-btn o-btn--blue">
+											<span><i class="icon-filters"></i> Zastosuj filtry</span>
+										</button>
+									</div>
+								
+								</div>
+							</div>
+
+
+							<div class="c-filters__item c-filters__item--search">
+								<input type="text" class="o-field" placeholder="wyszukaj poprawki">
+							</div>
+						</div>
+
+
+
+						<div class="c-list c-list--empty">
+							<div class="c-list__empty">
+								<i class="icon-empty-document"></i>
+								<p>Brak poprawek dla wybranych kryteriów</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+		</div>		
+		
+			
+	
+	<footer class="c-footer">
+			<p class="c-footer__copy">&copy; Wszelkie prawa zastrzeżone dla Tesco Polska. <a href="#">Regulamin</a> serwisu</p>
+			<p class="c-footer__created">Created by <a href="https://roxxmedia.pl" target="_blank"><img src="img/logo/roxx.svg" alt="Roxx" width="35" height="11"></a></p>
+	</footer>
+
+
+
+	</div>
+	
+	
+	<div class="c-navbtn c-navbtn--list c-navbtn--prev">
+		<a href="#" class="o-btn o-btn--white weight-medium js-back"><i class="icon-arrow-fat--left"></i> <span>Powrót</span></a>
+	</div>
+
+
+
+	<div class="c-gallery-modal" id="gallery-01">
+		<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg"></a>
+		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg"></a>
+	</div>
+	
+	<div class="c-gallery-modal" id="gallery-02">
+		<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg"></a>
+		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg"></a>
+	</div>
+	
+	<div class="c-gallery-modal" id="gallery-03">
+		<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg"></a>
+		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg"></a>
+	</div>
+
+
+
+	
+<script src="js/libs.js"></script>
+<script src="js/script.js"></script>
+
+
+</body>
+</html>

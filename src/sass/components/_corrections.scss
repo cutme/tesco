@@ -1,17 +1,26 @@
 .c-corrections {
-	width: $base + px;
 	padding-top: 20px;
+	
+	@media screen and ( max-width: $tablet + px ) {
+		padding-top: 0;
+	}
 
 	&__content {
 		background-color: white;
 		box-shadow: 0 5px 25px rgba(black, .1);
 		border-bottom: 1px solid $c-gray--brighter;
+		
+		@media screen and ( max-width: $tablet + px ) {
+			padding-top: 20px;
+		}
 	}
 	
 	.o-header {
-		padding: {
-			left: 40px;
-			right: 40px;
+	
+		@media screen and ( max-width: $smartphone + px ) {			
+			.o-header__title {
+				font-size: get-vw-640(32);
+			}
 		}
 		
 		.o-btn {
@@ -24,8 +33,18 @@
 		.icon-tools {
 			margin-right: 10px;
 			font-size: em(21);
+						
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: em(16);
+			}
 		}
 	}
 	
+	.submit-correction {
+		@media screen and ( max-width: $tablet + px ) {
+			display: none;
+		}
+	}
+
 }
 
