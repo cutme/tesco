@@ -13,47 +13,12 @@
 		padding: 20px grid(40, $smartphone);
 	}
 	
-	&__overlay {
-		@media screen and ( max-width: $tablet + px ) {
-			display: none;
-		}
-
-		.nav-filters & {
-
-			position: fixed;
-			left: 0; top: 0; z-index: 10;
-			display: flex;
-			justify-content: center;
-			width: 100%; height: 100vh;
-			background-color: white;
-			animation: fadeInFromNone .5s ease-out;
-			
-			.nice-select {
-				height: 80px;
-				line-height: 80px;
-				font-size: em(20);
-				
-				@media screen and ( max-width: 560px) {
-					height: get-vw-560(80);
-					line-height: get-vw-560(80);
-					font-size: get-vw-560(20);
-				}
-				
-				&:after {
-					right: 20px;
-					height: 80px;
-					font-size: em(12);
-				}
-				
-				.current {
-					font-weight: $medium;
-				}
-			}
-		}
-	}
-
 	&__content {
 		@extend %flex;
+		
+		@media screen and ( max-width: $tablet + px ) {
+			width: 560px;
+		}
 		
 		.nav-filters & {
 			flex-direction: column;
@@ -67,8 +32,12 @@
 			.c-filters__item--wide {
 				margin-bottom: 20px;
 				
-				@media screen and ( max-width: 560px ) {
-					margin-bottom: get-vw-560(20);
+				@media screen and ( max-width: $smartphone + px ) {
+					margin-bottom: get-vw-640(20);
+				}
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					margin-bottom: get-vw-480(20);
 				}
 			}
 			
@@ -81,6 +50,51 @@
 		
 		.o-header {
 			display: none;
+		}
+	}
+	
+	&__overlay {
+		@media screen and ( max-width: $tablet + px ) {
+			display: none;
+		}
+
+		.nav-filters & {
+			position: fixed;
+			left: 0; top: 0; z-index: 10;
+			display: flex;
+			justify-content: center;
+			width: 100%; height: 100vh;
+			background-color: white;
+			animation: fadeInFromNone .5s ease-out;
+			
+			
+			.nice-select {
+				height: 80px;
+				line-height: 80px;
+				font-size: em(20);
+				
+				@media screen and ( max-width: $smartphone + px) {
+					height: get-vw-560(80);
+					line-height: get-vw-560(80);
+					font-size: get-vw-560(20);
+				}
+				
+				@media screen and ( max-width: $smartphone_portrait + px) {
+					height: get-vw-480(80);
+					line-height: get-vw-480(80);
+					font-size: get-vw-480(20);
+				}
+				
+				&:after {
+					right: 20px;
+					height: 80px;
+					font-size: em(12);
+				}
+				
+				.current {
+					font-weight: $medium;
+				}
+			}
 		}
 	}
 
@@ -102,9 +116,14 @@
 			    	height: 80px;
 			    	font-size: em(20);
 			    	
-			    	@media screen and ( max-width: 560px) {
+			    	@media screen and ( max-width: $smartphone + px) {
 			    		height: get-vw-560(80);
 				    	font-size: get-vw-560(20);
+				    }
+				    
+				    @media screen and ( max-width: $smartphone_portrait + px ) {
+				    	height: get-vw-480(80);
+				    	font-size: get-vw-480(20);
 				    }
 			    }			   	    
 		    }
@@ -121,14 +140,26 @@
 	    	display: none;
 			padding-top: 20px;
 			
+			
+			@media screen and ( min-height: 680px ) and ( max-width: 560px ) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			
 	    	.nav-filters & {
 	    		display: block;
+	    		
+	    		@media screen and ( min-width: 561px ) {
+	    			width: 560px;
+	    		}
 
 	    		@media screen and ( min-height: 680px ) {
 					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
 					bottom: 30px;
-		    		width: 560px;
-	    		}
+					//width: 560px;
+	    		}	    		
 	    	}
 
 			.o-btn {
@@ -143,12 +174,16 @@
 					font-size: em(16);
 				}
 				
-				@media screen and ( max-width: 560px ) {
-					height: get-vw-560(112);
-					font-size: get-vw-560(24);
+				@media screen and ( max-width: $smartphone + px ) {
+					height: get-vw-640(112);
+					font-size: get-vw-640(24);
+				}
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					height: get-vw-480(112);
+					font-size: get-vw-480(24);
 				}
 			}
-			
 	    }
     
 		&--wide {
@@ -157,20 +192,26 @@
 			}
 		}
 		
-		&--search {
+		&--search {			
 			@media screen and ( max-width: $tablet + px ) {
 				width: 100%;
-				
-				.o-field {
+			}
+
+			.o-field {
+			
+				@media screen and ( max-width: $tablet + px ) {
 					height: 64px;
 					font-size: em(20);
 				}
-			}
-			
-			@media screen and ( max-width: 560px ) {
-				.o-field {
+				
+				@media screen and ( max-width: 560px ) {
 					height: get-vw-560(64);
 					font-size: get-vw-560(20);
+				}
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					height: get-vw-480(64);
+					font-size: get-vw-480(20);
 				}
 			}
 		}

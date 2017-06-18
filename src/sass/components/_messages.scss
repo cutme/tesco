@@ -1,19 +1,17 @@
 .c-messages {
 	width: $messages + px;
-	
-	//@media screen and ( min-width: $tablet + 1px ) and ( max-width: 1390px ) {
-		//width: grid(800, 1390);
-	//}
-	
+
 	@media screen and ( max-width: $tablet + px ) {
 		width: 100%;
 	}
 	
+/*
 	&__content {
 		@media screen and ( max-width: $smartphone + px ) {
 			padding-top: get-vw-640(50);
-		}
+		}		
 	}
+*/
 	
 	.o-btn {
 		@media screen and ( max-width: 560px ) {
@@ -31,6 +29,10 @@
 	.o-header__title {
 		@media screen and ( max-width: $smartphone + px ) {
 			font-size: get-vw-640(40);
+		}
+		
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+			font-size: get-vw-480(40);
 		}
 	}
 	
@@ -54,6 +56,10 @@
 			
 			@media screen and ( max-width: $smartphone + px ) {
 				padding: get-vw-640(40) grid(40, $smartphone);
+			}
+			
+			@media screen and ( max-width: $smartphone_portrait + px ) {
+				padding: get-vw-480(40) grid(40, $smartphone_portrait);
 			}
 			
 			h3 {
@@ -68,11 +74,19 @@
 				@media screen and ( max-width: $smartphone + px ) {
 					font-size: get-vw-640(32);
 				}
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					font-size: get-vw-480(32);
+				}
 			}
 			
 			p {
 				@media screen and ( max-width: $smartphone + px ) {
 					font-size: get-vw-640(20);
+				}
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					font-size: get-vw-480(20);
 				}
 				
 			}
@@ -87,6 +101,14 @@
 		.c-page--dashboard & {		
 			@media screen and ( max-width: $tablet + px ) {
 				padding-top: 50px;
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				padding-top: get-vw-640(50);
+			}
+			
+			@media screen and ( max-width: $smartphone_portrait + px ) {
+				padding-top: get-vw-480(50);
 			}
 		}
 	}

@@ -7,5 +7,9 @@ time {
 	@media screen and ( max-width: $smartphone + px ) {
 		font-size: get-vw-640(16);
 	}
+	
+	@media screen and ( max-width: $smartphone_portrait + px ) {
+		font-size: get-vw-480(16);
+	}
 }
 

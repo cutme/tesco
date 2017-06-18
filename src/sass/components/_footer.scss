@@ -1,21 +1,17 @@
 .c-footer {	
 	@extend %flex;
-
-	@media screen and ( max-width: $base + px ) {
-		// width: 100%;
-		padding: 0 20px;
-	}
-
-	
-//	width: 	100%;
     justify-content: space-between;
-	color: white;
+	color: white;	
 
 	@media screen and ( min-width: $base + 1px ) {
 		position: absolute;
 		left: 50%; bottom: 0;
 		transform: translateX(-50%);
 		width: 1200px;
+	}
+	
+	@media screen and ( max-width: $base + px ) {
+		padding: 0 20px;
 	}
 	
 	@media screen and ( min-width: $tablet_portrait + 1px ) {
@@ -38,8 +34,13 @@
 			font-size: em(16);
 		}
 		
-		@media screen and ( max-width: 560px ) {
-			font-size: get-vw-560(16);
+		@media screen and ( max-width: $smartphone + px ) {
+			font-size: get-vw-640(16);
+		}
+		
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+			text-align: center;
+			font-size: get-vw-480(16);
 		}
 		
 	}

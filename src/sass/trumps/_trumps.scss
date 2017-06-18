@@ -36,10 +36,11 @@
 
 .no-scroll {
 	overflow: hidden;
+	position: fixed;
 }
 
 .pull-right {
-	float: right !important;;
+	float: right !important;
 }
 
 .text-center {

@@ -36,8 +36,12 @@
 			font-size: em(20);
 		}		
 		
-		@media screen and ( max-width: 560px ) {
+		@media screen and ( max-width: $smartphone + px ) {
 			font-size: get-vw-560(20);
+		}
+		
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+			font-size: get-vw-480(20);
 		}
 	}
 	
@@ -51,7 +55,13 @@
 		
 		@media screen and ( max-width: 560px ) {
 			margin-bottom: get-vw-560(30);
-		}	
+		}
+	
+		&__title {			
+			@media screen and ( max-width: $smartphone_portrait + px ) {
+				font-size: get-vw-480(27);
+			}
+		}
 		
 		.icon-keyboard {
 			display: inline-block;

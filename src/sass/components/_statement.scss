@@ -1,4 +1,5 @@
 .c-statement {
+	padding: 0 20px;
 	color: white;
 
 	.o-header {
@@ -18,6 +19,16 @@
 		
 		p { 
 			font-size: em(16);
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			margin-bottom: get-vw-640(60);
+			font-size: get-vw-640(16);
+		}
+		
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+			margin-bottom: get-vw-480(60);
+			font-size: get-vw-480(16);
 		}
 	}
 }

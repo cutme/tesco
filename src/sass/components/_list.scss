@@ -76,6 +76,7 @@
 		    }
 		    
 		    @media screen and ( max-width: $tablet + px ) {
+				
 				span {
 					display: none;
 				}
@@ -86,7 +87,24 @@
 			}
 		}
 		
-		
+		.rollin,
+		.rollout {
+			@media screen and ( max-width: $smartphone + px ) {
+				width: get-vw-640(64);
+				height: get-vw-640(64);
+
+				span {
+					display: none;
+					
+				}
+			}
+			
+						
+			@media screen and ( max-width: $smartphone_portrait + px ) {
+				width: get-vw-480(64);
+				height: get-vw-480(64);
+			}
+		}
 		
 		.rollin {
 			display: none;
@@ -94,7 +112,7 @@
 			@media screen and ( max-width: $smartphone + px ) {
 				display: none;
 			}
-			
+
 			.is-active & {
 				display: flex;
 			}
@@ -105,18 +123,7 @@
 
 			@media screen and ( max-width: $smartphone + px ) {
 				display: flex;
-				width: 64px; height: 64px;	
 				color: white;
-
-				span {
-					display: none;
-					
-				}
-			}
-			
-			@media screen and ( max-width: 560px ) {
-				width: get-vw-560(64);
-				height: get-vw-560(64);
 			}
 			
 			.is-active & {
@@ -132,10 +139,13 @@
 	}
 
 	&__comment {
-		width: 455px;
 		background-color: #eaf6fe;
 		border: 1px solid #d4edfc;
-		padding: 20px 40px;
+		padding: 20px grid(40, $base - 80);
+		
+		@media screen and ( min-width: $smartphone + 1px ) {
+			width: grid(455, $base - 80);
+		}
 
 		h6 {
 			margin-bottom: 5px;
@@ -144,23 +154,67 @@
 				weight: $bold;
 			}
 			color: $c-blue;
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: get-vw-640(20);
+			}
+			
+			@media screen and ( max-width: $smartphone_portrait + px ) {
+				font-size: get-vw-480(20);
+			}
 		}
 		
 		p {
 			color: #5494cf;
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: get-vw-640(16);
+			}
+			
+			@media screen and ( max-width: $smartphone_portrait + px ) {
+				font-size: get-vw-480(16);
+			}
 		}
 	}
 
 	&__desc {
 		@extend %rel;
-		top: -4px;
-		width: 500px;
-		margin-right: 30px;
 		color: #00539f;
+		
+		.author, .desc {
+			display: none;
+		}
+		
+		@media screen and ( min-width: $smartphone + 1px ) {
+			width: grid(500, $base - 80);
+			margin-right: 30px;
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			margin-bottom: get-vw-640(40);
+			font-size: get-vw-640(20);
+			
+			.author {
+				display: block;
+			}
+			
+			.desc {
+				display: inline;
+			}
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			margin-bottom: get-vw-480(40);
+			font-size: get-vw-480(20);
+		}
 	}
 	
 	&__message {
 		width: 50px;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			display: none;
+		}
 		
 		.icon-message {
 			font-size: em(32);
@@ -191,12 +245,22 @@
 			line-height: 20px;
 			font-size: em(12);
 			color: white;
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				width: 32px; height: 32px;
+				line-height: 28px;
+				font-size: em(16);
+			}
 		}
 		
 		i {
 			@extend %abs-xy;
 			z-index: 15;
 			color: white;
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: em(26);
+			}
 		}
 	}
 	
@@ -209,11 +273,11 @@
 	    padding: 15px 0;
 	    
 	    @media screen and ( max-width: $smartphone + px ) {
-	    	padding: 35px 0;
+	    	padding: get-vw-640(35) 0;
 	    }
 	    
-		@media screen and ( max-width: 560px ) {
-			padding: get-vw-560(35) 0;
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+			padding: get-vw-480(35) 0;
 		}
 	    
 	    &:nth-child(even) {
@@ -259,26 +323,24 @@
 		
 		.date {
 			@media screen and ( max-width: $smartphone + px ) {
-				font-size: em(16);
+				font-size: get-vw-640(16);
 			}
 			
-			@media screen and ( max-width: 560px ) {
-				font-size: get-vw-560(16);
+			@media screen and ( max-width: $smartphone_portrait + px ) {
+				font-size: get-vw-480(16);
 			}
 		}
 		
-		@media screen and ( max-width: $smartphone + px ) {
-			.id, .name {
+		.id, .name {
+			@media screen and ( max-width: $smartphone + px ) {
 				display: inline;
-				font-size: em(20);
+				font-size: get-vw-640(20);
 			}
-		}
-		
-		@media screen and ( max-width: 560px) {
-			.id, .name {
-				font-size: get-vw-560(20);
+			
+			@media screen and ( max-width: $smartphone_portrait + px ) {
+				font-size: get-vw-480(20);
 			}
-		}
+		}		
 	}
 	
 	&__row {
@@ -296,10 +358,58 @@
 		}
 		
 		&--details {
+			@extend %rel;
+			align-items: flex-start;
 			padding: {
 				top: 40px;
 				bottom: 20px;
-			}			
+			}
+			
+			.o-btn.vote {
+				display: none;
+				
+				@media screen and ( max-width: $smartphone + px ) {
+					position: absolute;
+					right: grid(40, $smartphone); top: 40px;
+					display: flex;
+					height: get-vw-640(64);
+
+					span {
+						font-size: get-vw-640(20);
+					}
+					
+					.icon-heart {
+						font-size: em(18);
+					}
+				}
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					height: get-vw-480(64);
+	
+					span {
+						font-size: get-vw-480(20);
+					}
+					
+					.icon-heart {
+						font-size: get-vw-480(18);
+					}
+				}
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+			    flex-direction: column;	
+			    align-items: flex-start;
+			    padding-top: 40px;
+			    
+			    &:after {
+				    @extend %abs-after;
+				    width: 100%;
+				    height: 1px;
+				    left: 40px;
+				    top: 20px;
+				    background-color: #e9f6fd;
+			    }
+			}	
 			
 			.is-active & {
 				animation: fadeInFromNone .5s ease-out;
@@ -333,6 +443,10 @@
 	&__thumbnail {
 		@extend %rel;
 		width: 85px;		
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__votes {
@@ -342,11 +456,11 @@
 		
 		span {
 			@media screen and ( max-width: $smartphone + px ) {
-				font-size: em(20);
+				font-size: get-vw-640(20);
 			}
 			
-			@media screen and ( max-width: 560px) {
-				font-size: get-vw-560(20);
+			@media screen and ( max-width: $smartphone_portrait + px) {
+				font-size: get-vw-480(20);
 			}
 		}
 		

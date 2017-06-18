@@ -16,20 +16,20 @@
 		left: 40px; top: 32px;
 		font-size: em(20);
 		
-		@media screen and ( max-width: 560px ) {
-			left: get-vw-560(40);
-			top: get-vw-560(32);
-			font-size: get-vw-560(20);
-			
-			span {
-				display: none;
-			}
-		}
-		
 		.icon-arrow-fat--left {
 			&:before {
 				font-size: em(20);
 			}
+		}
+	}
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		left: get-vw-640(40);
+		top: get-vw-640(32);
+		font-size: get-vw-640(20);
+		
+		span {
+			display: none;
 		}
 	}
 	
@@ -39,6 +39,14 @@
 	}
 	
 	&--list {
+		left: calc((100% - 1200px)/2);
+		
+		@media screen and ( max-width: $base + 40px ) {
+			left: 20px;
+		}
+	}
+	
+	&--status {
 		left: calc((100% - 1200px)/2);
 		
 		@media screen and ( max-width: $base + 40px ) {

@@ -113,9 +113,14 @@
 			font-size: em(24);
 		}
 
-		@media screen and ( max-width: 560px ) {
-			height: get-vw-560(112);
-			font-size: get-vw-560(24);
+		@media screen and ( max-width: $smartphone + px ) {
+			height: get-vw-640(112);
+			font-size: get-vw-640(24);
+		}
+		
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+			height: get-vw-480(112);
+			font-size: get-vw-480(24);
 		}
 
 		.icon-circle {

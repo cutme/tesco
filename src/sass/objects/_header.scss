@@ -2,19 +2,30 @@
 	@extend %rel;
 
 	&__title {
+		line-height: 1.2;
 		font: {
 			size: em(32);
 			weight: $bold;
 		}
 		
-		@media screen and ( max-width: 560px ) {
-			font-size: get-vw-560(32);
+		@media screen and ( max-width: $smartphone + px ) {
+			font-size: get-vw-640(32);
+		}
+		
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+			font-size: get-vw-480(32);
 		}
 	}
 	
 	&__subtitle {
-		font: {
-			size: em(24);
+		font-size: em(24);
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			font-size: get-vw-640(24);
+		}
+		
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+			font-size: get-vw-480(24);
 		}
 	}
 	
@@ -54,7 +65,11 @@
 				right: get-vw-640(40);
 				height: get-vw-640(64);
 				padding: 0 get-vw-640(30);
-				font-size: em(16);
+				font-size: get-vw-640(16);
+			}
+			
+			@media screen and ( max-width: $smartphone_portrait + px ) {
+				font-size: get-vw-480(16);
 			}
 		}
 	}
