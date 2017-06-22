@@ -16,7 +16,7 @@
 		if (tesco.Helper.exist('.js-openGallery')) new tesco.Gallery();
 		if (tesco.Helper.exist('.nice-select')) tesco.Helper.nSelect();		
 		if (tesco.Helper.exist('[data-toggle="datepicker"]')) tesco.Datepicker.init();
-		
+		if (tesco.Helper.exist('#autocomplete')) tesco.Autocomplete.init();
 		
 	});
 

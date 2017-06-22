@@ -1,5 +1,6 @@
 .c-list {
 	@extend %rel;
+	z-index: 1;
 	color: $c-blue;
 
 	&--empty {

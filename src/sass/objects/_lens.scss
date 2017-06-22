@@ -1,0 +1,18 @@
+.o-lens {
+	@extend %abs;
+	right: 1px; top: 1px; z-index: 10;
+	background-color: white; 
+	background: {
+		image: url(../img/icons/lens--dot.svg);
+		position: center;
+		size: 18px 18px;
+		repeat: no-repeat;
+	}
+	width: 45px;
+	height: 38px;
+	border-left: 1px solid $c-blue;
+	
+	&:hover {
+		background-size: 20px 20px;
+	}
+}

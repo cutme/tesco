@@ -1,5 +1,6 @@
 .c-filters {
 	@extend %flex;
+	@extend %rel;
     justify-content: space-between;
 	padding: 20px 40px;
 	color: $c-blue;
@@ -192,12 +193,16 @@
 			}
 		}
 		
-		&--search {			
+		&--search {		
+			@extend %rel;	
+			width: 246px;
+
 			@media screen and ( max-width: $tablet + px ) {
 				width: 100%;
 			}
 
 			.o-field {
+				padding-right: 60px;
 			
 				@media screen and ( max-width: $tablet + px ) {
 					height: 64px;

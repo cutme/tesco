@@ -2,6 +2,15 @@
 	@include icomoon;
 }
 
+.easy-autocomplete {
+	width: 100%;
+	
+	.o-field {
+		border-radius: 0;
+		color: $c-blue !important;
+	}
+}
+
 .in-oval {
 	@extend %flex-xy;
 	width: 32px; height: 32px;

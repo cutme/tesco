@@ -1,5 +1,6 @@
 .o-field {
 	@extend %anim-slow;
+	@extend %rel;
 	padding: 0 20px;
 	height: 40px;
 	background-color: white;

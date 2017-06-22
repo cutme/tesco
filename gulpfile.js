@@ -112,7 +112,7 @@ gulp.task('manifest', function(){
 });
 
 gulp.task('fileinclude', function() {
-    gulp.src(['src/*.html'])
+    gulp.src(['src/*.html', 'src/*.php'])
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
@@ -158,5 +158,6 @@ gulp.task('watch', function() {
     gulp.watch('src/sass/**/*.scss', ['sass']);
     gulp.watch('src/img/**/*', ['img']);
     gulp.watch('src/**/*.html', ['fileinclude']);
+    gulp.watch('src/**/*.php', ['fileinclude']);
     gulp.watch('src/includes/**/*.html', ['fileinclude']);
 });
