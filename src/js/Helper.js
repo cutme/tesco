@@ -7,7 +7,9 @@
         	exist: exist,
         	blazy: blazy,
         	isMobile: isMobile,
-        	nSelect: nSelect
+        	iosFix: iosFix,
+        	nSelect: nSelect,
+        	textareaCounter: textareaCounter
         };
     };
     
@@ -44,11 +46,53 @@
 			$('html').addClass('desktop');
 		}
 	}
+	
+	function iosFix() {
+	
+		var documentHeight = document.body.scrollHeight,
+			windowHeight = window.innerHeight,
+			container  = $('.o-bg');	
+	
+		function documentHigherThanWindow() {
+			documentHeight = document.body.scrollHeight;
+			windowHeight = window.innerHeight;
+
+			return documentHeight <= windowHeight;
+		}
+
+		function setFullHeight() {
+			container.height(windowHeight);
+		}
+
+		if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {		
+
+			if (documentHigherThanWindow()) setFullHeight();
+			
+			window.addEventListener("orientationchange", function() {
+				document.documentElement.innerHTML = document.documentElement.innerHTML;
+				if (documentHigherThanWindow()) setFullHeight();
+			}, false);
+
+		} else {
+			$('html').addClass('set-min-height');
+		}
+	}
 
 	function nSelect() {
 		$('.nice-select').niceSelect();
 	}
 	
+	function textareaCounter() {
+	
+		var textarea = document.getElementById('textarea_description'),
+			counter = document.getElementById('textarea_count'),
+			maxlength = $(textarea).attr('maxlength');
+
+		textarea.onkeyup = function () {
+			counter.innerHTML = maxlength - this.value.length;
+		};
+	}
+
 	tesco.Helper = new Helper();
 
 }(window, document, jQuery, window.tesco = window.tesco || {}));

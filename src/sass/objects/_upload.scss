@@ -1,0 +1,15 @@
+.o-upload {      
+	overflow: hidden;
+    
+    input[type='file'] {
+		@extend %abs;
+		opacity: 0;
+		left: 0; top: 0;
+		z-index: 10;
+		display: block;
+		cursor: inherit;        
+		font-size: 999px;
+		min-height: 100%;
+		min-width: 100%;
+    }
+}

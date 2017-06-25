@@ -49,12 +49,18 @@
 						</div>
 						
 						<div class="o-row">
-							<textarea class="o-field" placeholder="Opisz co trzeba poprawić"></textarea>
+							<textarea class="o-field" placeholder="Opisz co trzeba poprawić" id="textarea_description" maxlength="500"></textarea>
 						</div>
 						
 						<div class="o-row">
 							<div class="o-row__col">
-								<a href="#" class="o-btn o-btn--blue-darker o-btn--big"><i class="icon-plus"></i> Dodaj zdjęcia</a>
+							
+								<div class="o-upload o-btn o-btn--blue-darker o-btn--big js-upload">
+									<input type="file" id="file" name="zdjecia[]" multiple />
+									<span class="o-btn__title"><i class="icon-plus"></i> Dodaj zdjęcia</span>
+								</div>
+							
+<!-- 							<a href="#" class="o-btn o-btn--blue-darker o-btn--big"><i class="icon-plus"></i> Dodaj zdjęcia</a> -->
 							</div>
 							
 							<div class="o-row__col">
@@ -63,15 +69,16 @@
 								</button>
 							</div>
 						</div>
-						
+
 						<div class="o-row">
 							<div class="c-meta">
-								<div class="c-meta__upload" >
-									Dodano zdjęć (3) <a href="#" class="c-meta__del"><i class="icon-x"></i> Usuń</a>
+								<div class="c-meta__upload is-hidden js-uploadInfo">
+									Dodano zdjęć (<span id="num_selected_files"></span>) 
+									<a href="#" class="c-meta__del js-removeSelectedFiles"><i class="icon-x"></i> Usuń</a>
 								</div>
-								
+
 								<div class="c-meta__textarea">
-									Pozostało 500 znaków
+									Pozostało <span id="textarea_count">500</span> znaków
 								</div>
 							</div>
 						</div>

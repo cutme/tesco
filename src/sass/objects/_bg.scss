@@ -1,6 +1,11 @@
+
 .o-bg {
 	@extend %rel;
-	min-height: 100vh;
+//	min-height: 100vh;
+
+	.set-min-height & {
+		min-height: 100vh;
+	}
 	
 	background: {
 		size: cover;
@@ -18,14 +23,6 @@
 			}
 		}
 	}
-	
-/*
-	&--list {
-		@media screen and ( max-width: $tablet_portrait + px ) {
-			//background-image: url(../img/bg/list.jpg) !important;
-		}
-	}
-*/
 
 	&--login {
 		@media screen and ( max-width: $tablet_portrait + px ) {
