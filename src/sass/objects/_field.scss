@@ -43,6 +43,22 @@
 	&.parsley-error {
 		border-color: $c-red;
 		color: $c-red;
+		
+		&::-webkit-input-placeholder {
+			color: $c-red;
+		}
+		
+		&:-moz-placeholder {
+			color: $c-red;
+		}
+		
+		&::-moz-placeholder {
+			color: $c-red;
+		}
+		
+		&:-ms-input-placeholder {
+			color: $c-red;
+		}
 	}
 }
 

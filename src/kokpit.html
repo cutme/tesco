@@ -16,7 +16,7 @@
 						<h3 class="o-header__title">Twoja propozycja poprawki</h3>
 					</header>
 			
-					<form action="#" class="o-form">
+					<form action="#" class="o-form" data-parsley-validate data-parsley-errors-messages-disabled>
 						<div class="o-row">
 							<div class="o-row__col">
 								<strong>Kategoria pomysłu</strong>
@@ -33,7 +33,7 @@
 						</div>
 		
 						<div class="o-row">
-							<input type="text" class="o-field" placeholder="Temat pomysłu">
+							<input type="text" class="o-field" placeholder="Temat pomysłu" required>
 						</div>
 						
 						<div class="o-row">
