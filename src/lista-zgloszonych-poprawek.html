@@ -49,7 +49,7 @@
 								<li class="c-list__item js-accContent">		
 									<div class="c-list__row c-list__row--body">
 										<div class="c-list__name">
-											<p class="id">885.</p>
+											<p class="id">888.</p>
 											<p class="name">Promocje</p>
 											<p class="date">03.09.2017</p>
 										</div>
@@ -109,7 +109,7 @@
 								<li class="c-list__item js-accContent">
 									<div class="c-list__row c-list__row--body">
 										<div class="c-list__name">
-											<p class="id">885.</p>
+											<p class="id">886.</p>
 											<p class="name">Promocje</p>
 											<p class="date">03.09.2017</p>
 										</div>
@@ -169,7 +169,7 @@
 								<li class="c-list__item js-accContent">
 									<div class="c-list__row c-list__row--body">
 										<div class="c-list__name">
-											<p class="id">885.</p>
+											<p class="id">887.</p>
 											<p class="name">Promocje</p>
 											<p class="date">03.09.2017</p>
 										</div>
@@ -297,6 +297,38 @@
 		<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg"></a>
 		<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c<span>12</span>84f_b.jpg"></a>
 	</div>
+	
+	
+	
+	<form action="#" class="c-overlay is-hidden" id="confirmOverlay" data-parsley-validate>
+		<fieldset class="c-confirm">
+			
+			<header class="o-header">
+				<h3 class="o-header__title">Potwierdź swój e-mail</h3> 				
+			</header>
+
+			<div class="c-confirm__field">
+				<input type="email" class="o-field o-field--big" placeholder="e-mail" required data-parsley-equalto="#email_confirm">
+			</div>
+			
+			<div class="c-confirm__field">
+				<input type="email" class="o-field o-field--big" placeholder="powtórz e-mail" required id="email_confirm">
+			</div>
+			
+			<div class="c-confirm__field c-confirm__field--submit">
+				<button 
+					type="submit" 
+					class="o-btn o-btn--red o-btn--big">
+					
+					<span>Potwierdź</span> <i class="icon-arrow-fat--right in-oval"></i>
+				</button>
+			</div>
+			
+			<a href="#" class="c-confirm__close js-close"><span>Zamknij</span> <i class="icon-x-2"></i></a>
+	
+			<input type="hidden" name="confirmation_id">
+		</fieldset>
+	</form>
 
 
 	@@include('./includes/scripts.html')

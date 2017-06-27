@@ -9,6 +9,7 @@
         	isMobile: isMobile,
         	iosFix: iosFix,
         	nSelect: nSelect,
+        	parsleyLang: parsleyLang,
         	textareaCounter: textareaCounter
         };
     };
@@ -80,6 +81,11 @@
 
 	function nSelect() {
 		$('.nice-select').niceSelect();
+	}
+	
+	function parsleyLang() {
+		var lang = $('html').attr('lang');
+		Parsley.setLocale(lang);
 	}
 	
 	function textareaCounter() {
