@@ -1,7 +1,11 @@
 
 .o-bg {
 	@extend %rel;
-//	min-height: 100vh;
+	min-height: 100vh;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		min-height: calc(100vh - 84px );
+	}
 
 	.set-min-height & {
 		min-height: 100vh;

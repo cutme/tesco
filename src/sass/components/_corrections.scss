@@ -1,4 +1,5 @@
 .c-corrections {
+	@extend %rel;
 	padding-top: 20px;
 	
 	@media screen and ( max-width: $tablet + px ) {

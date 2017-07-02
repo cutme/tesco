@@ -74,17 +74,17 @@
 	&--big {
 		height: 48px;
 		
-		@media screen and ( max-width: $tablet_portrait + px ) {
+		@media screen and ( max-width: $tablet_portrait + px ) and ( orientation: portrait ) {
 			height: 80px;
 			font-size: em(24);
 		}
 		
-		@media screen and ( max-width: $smartphone + px ) {
+		@media screen and ( max-width: $smartphone + px ) and ( orientation: portrait ) {
 			height: get-vw-640(80);
 			font-size: get-vw-640(20);
 		}
 		
-		@media screen and ( max-width: $smartphone_portrait + px ) {
+		@media screen and ( max-width: $smartphone_portrait + px )  and ( orientation: portrait ) {
 			height: get-vw-480(80);
 			font-size: get-vw-480(20);
 		}

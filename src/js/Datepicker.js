@@ -31,26 +31,29 @@
 		    monthsShort: ['Sty', 'Lut', 'Mar', 'Kwi', 'Maj', 'Cze', 'Lip', 'Sie', 'Wrz', 'Paź', 'Lis', 'Gru']
 		  };
 		});	
-
-
-		$('#toDate').datepicker({
+		
+		var datepickerOptions = {
+			//inline: true,
+			//container: '#test',
+			
 			autoHide: true,
 			autoPick: true,
 			language: 'pl-PL'
-		});
+			
+			
+		}
+		
 
-		$('#fromDate').datepicker({
-			autoHide: true,
-			autoPick: true,
-			language: 'pl-PL'
-		}).on('pick.datepicker', function (e) {
-	
+
+
+		$('#toDate').datepicker(datepickerOptions);
+
+		$('#fromDate').datepicker(datepickerOptions).on('pick.datepicker', function (e) {
+		
+			//$('.c-filters__overlay').addClass('openedDatepicker');
+		
 			$('#toDate').datepicker('destroy');
-			$("#toDate").datepicker({		
-				startDate: e.date,
-				autoHide: true,
-				language: 'pl-PL'
-			});
+			$("#toDate").datepicker(datepickerOptions);
 
 			$('#toDate').datepicker('setDate', e.date);
 			

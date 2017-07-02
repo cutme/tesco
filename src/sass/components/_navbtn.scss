@@ -6,14 +6,10 @@
 	z-index: 30;
 	transform: translateX(-100%);
 	opacity: 0;
-	
-	@media screen and ( max-width: $tablet + px ) {
-		left: 20px;
-	}
-	
+
 	@media screen and ( max-width: $tablet + px ) {
 		position: fixed;
-		left: 40px; top: 32px;
+		left: 40px; top: 37px;
 		font-size: em(20);
 		
 		.icon-arrow-fat--left {
@@ -23,10 +19,10 @@
 		}
 	}
 	
-	@media screen and ( max-width: $smartphone + px ) {
-		left: get-vw-640(40);
-		top: get-vw-640(32);
-		font-size: get-vw-640(20);
+	@media screen and ( max-width: $smartphone_portrait + px ) {
+		left: get-vw-480(40);
+		top: get-vw-480(37);
+		font-size: get-vw-480(20);
 		
 		span {
 			display: none;
@@ -64,14 +60,20 @@
 
 	&--prev {
 		.o-btn {
+
+			span {
+				font-weight: $medium;
+			}
+
 			@media screen and ( max-width: $tablet + px ) {
+				align-items: flex-start;
 				background: none;
 				padding: 0;
 				height: auto;
 			}
 			
 			i {
-				margin-right: 10px;
+				margin-right: 15px;
 				font-size: em(11) !important;
 			}
 			

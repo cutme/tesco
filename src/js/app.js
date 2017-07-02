@@ -5,9 +5,10 @@
 	$(document).ready(function() {
 		
 		tesco.Helper.isMobile();
-		tesco.Helper.iosFix();
+		//tesco.Helper.iosFix();
 		tesco.Nav.menu();
 		
+		tesco.Helper.clearInput('.c-filters__item--search');
 		
 		if (tesco.Helper.exist('.b-lazy')) tesco.Helper.blazy();
 		if (tesco.Helper.exist('.js-accordion')) tesco.Accordion.init('#list');
@@ -18,7 +19,7 @@
 		if (tesco.Helper.exist('.nice-select')) tesco.Helper.nSelect();		
 		if (tesco.Helper.exist('[data-toggle="datepicker"]')) tesco.Datepicker.init();
 		
-		if (tesco.Helper.exist('#autocomplete')) tesco.Autocomplete.init();
+//		if (tesco.Helper.exist('#autocomplete')) tesco.Autocomplete.init();
 		if (tesco.Helper.exist('#list')) tesco.Vote.init();
 		if (tesco.Helper.exist('#textarea_count')) tesco.Helper.textareaCounter();
 

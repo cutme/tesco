@@ -18,11 +18,11 @@
 	border: 2px solid white;
 	border-radius: 50%;
 	
-	@media screen and ( max-width: $tablet_portrait + px ) {
+	@media screen and ( max-width: $tablet_portrait + px ) and ( orientation: portrait ) {
 		width: 48px; height: 48px;
 	}
 	
-	@media screen and ( max-width: 560px ) {
+	@media screen and ( max-width: 560px ) and ( orientation: portrait ) {
 		width: get-vw-560(48);
 		height: get-vw-560(48);
 	}

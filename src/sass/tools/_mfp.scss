@@ -4,8 +4,14 @@
 }
 
 .mfp-close {
+	position: relative;
+    right: auto;
+    top: auto;
+    float: right;
+    
 	opacity: 1;
-	top: -46px;
+	
+	//top: -46px;
 	font-size: 16px;
 	
 	i {
@@ -13,33 +19,43 @@
 	}
 	
 	&:active {
-		top: -46px;
+		//top: -46px;
 	}
 }
 
 .mfp-figure {
 	border-radius: 0;
+	
+	&:after {
+		display: none;
+	}
 }
 
 .mfp-img {
+	max-height: 70vh !important;
 	padding: 0 !important;
 	border: 10px solid white;
 }
 
 .mfp-counter {
-	left: 0;
+	position: relative;
+	top: auto;
+	left: auto;
 	right: auto;
 	font-size: 16px;
 	color: white;
 }
 
 .mfp-bottom-bar {
+	position: relative;
 	margin-top: 20px;
+	bottom: auto;
 }
 
 .mfp-arrow {
 	@extend %icomoon;
 	@extend %anim;
+	z-index: 30;
 	display: block;
 	width: 48px; 
 	height: 48px;
@@ -57,6 +73,10 @@
 	&.mfp-arrow-left {
 		left: -48px;
 		
+		@media screen and ( max-width: $tablet + px ) {
+			left: 0;
+		}
+		
 		&:before {
 			content: "\e901";
 		}
@@ -64,6 +84,10 @@
 	
 	&.mfp-arrow-right {
 		right: -48px;
+		
+		@media screen and ( max-width: $tablet + px ) {
+			right: 0;
+		}
 		
 		&:before {
 			content: "\e902";

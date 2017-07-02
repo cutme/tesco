@@ -4,6 +4,7 @@
 	var Helper = function() {
         return {
         	back: back,
+        	clearInput: clearInput,
         	exist: exist,
         	blazy: blazy,
         	isMobile: isMobile,
@@ -35,6 +36,31 @@
 	        }
 	   });
 	}
+	
+	function clearInput(container) {
+		var el = $(container),
+			clearBtn = $('<div class="o-clear-input icon-x" />'),
+			input = $('input', el),
+			chars;
+		
+		el.append(clearBtn);
+		
+		input.on('keyup', function() {
+			chars = input.val().length;
+
+			if (chars > 0) {
+				clearBtn.addClass('is-active');
+			} else {
+				clearBtn.removeClass('is-active');
+			}
+		});
+		
+		clearBtn.on('click', function(e) {
+			e.preventDefault();
+			input.val('').focus();
+			clearBtn.removeClass('is-active');
+		});
+	}
 
     function exist(o) {
 		return ($(o).length > 0) ? true : false;
@@ -53,26 +79,31 @@
 		var documentHeight = document.body.scrollHeight,
 			windowHeight = window.innerHeight,
 			container  = $('.o-bg');	
-	
+
 		function documentHigherThanWindow() {
+		
 			documentHeight = document.body.scrollHeight;
 			windowHeight = window.innerHeight;
 
+			
 			return documentHeight <= windowHeight;
 		}
 
 		function setFullHeight() {
-			container.height(windowHeight);
+			container.height(windowHeight);			
+			
+			window.addEventListener("orientationchange", function() {
+				document.documentElement.innerHTML = document.documentElement.innerHTML;
+				if (documentHigherThanWindow()) setFullHeight();
+			}, false);
 		}
 
 		if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {		
 
 			if (documentHigherThanWindow()) setFullHeight();
 			
-			window.addEventListener("orientationchange", function() {
-				document.documentElement.innerHTML = document.documentElement.innerHTML;
-				if (documentHigherThanWindow()) setFullHeight();
-			}, false);
+			
+			
 
 		} else {
 			$('html').addClass('set-min-height');

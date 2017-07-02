@@ -2,15 +2,15 @@
 	@extend %flex;
 	@extend %rel;
 	z-index: 20;
-	min-height: calc(100vh - 40px);
+	min-height: calc(100vh - 64px);
 	padding: 140px 0 40px 0;
 	
 	@media screen and ( max-width: $tablet_portrait + px ) {
-		min-height: calc(100vh - 60px);
+		min-height: calc(100vh - 84px );
 	}
 	
-	@media screen and ( max-width: 560 + px ) {
-		padding: get-vw-560(140) 0 get-vw-560(40) 0;
+	@media screen and ( max-width: $smartphone_portrait + px ) {
+		padding: get-vw-480(100) 0 get-vw-480(40) 0;
 	}
 	
 	justify-content: center;
@@ -39,7 +39,7 @@
 		}
 		
 		@media screen and ( max-width: 560px ) {
-			padding-top: get-vw-560(100);
+			//padding-top: get-vw-560(100);
 		}
 	}
 	

@@ -8,7 +8,18 @@
 		var openFilters = $('.js-filters'),
 			closeFilters = $('.js-navFilters'),
 			body = document.getElementsByTagName('body'),
-			listenKeys;
+			filters,
+			listenKeys,
+			ww;
+			
+		$(window).on('resize', function() {
+			ww = $(window).width();
+			
+			if ((ww > 1024) && (filters === true)) {
+				hideFilters();
+				filters = false;
+			}
+		});
 
 		function hideFilters() {
 			$(body).removeClass('no-scroll nav-filters');
@@ -16,6 +27,7 @@
 		}
 
 		function showFilters() {
+			filters = true;
 
 			listenKeys = function(evt) {			
 			    evt = evt || window.event;
@@ -49,7 +61,18 @@
 			body = document.getElementsByTagName('body'),
 			detached = false,
 			listenKeys,
-			m;
+			menuStatus,
+			m,
+			ww;
+			
+		$(window).on('resize', function() {
+			ww = $(window).width();
+			
+			if ((ww > 1024) && (menuStatus === true)) {
+				hideMenu();
+				filters = false;
+			}
+		});
 		
 		function hideMenu() {
 			m = menu.detach();
@@ -60,6 +83,8 @@
 		}
 		
 		function showMenu() {
+			menuStatus = true;
+
 			top.after(m);
 			
 			listenKeys = function(evt) {			
