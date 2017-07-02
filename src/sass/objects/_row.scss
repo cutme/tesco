@@ -5,6 +5,10 @@
     align-items: center;
 	margin-bottom: 10px;
 	
+	&--no-center {
+		   align-items: flex-start;
+	}
+	
 	@media screen and ( max-width: $smartphone + px ) {
 		flex-direction: column;
 	}

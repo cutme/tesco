@@ -86,11 +86,12 @@
 			background-color: white;
 			animation: fadeInFromNone .5s ease-out;
 			overflow: auto;
+			-webkit-overflow-scrolling: touch;
 			
 			@media screen and ( max-height: 740px ) {
 				align-items: flex-start;
 			}
-			
+
 			.nice-select {	
 			
 				@media screen and ( min-height: 400px ) and ( max-width: $tablet + px )  {

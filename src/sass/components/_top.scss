@@ -7,6 +7,10 @@
 	background-color: white;
 	//overflow: hidden;
 	box-shadow: 0 3px 9px rgba(#190f11, .16);
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		height: get-vw-768(100);
+	}
 
 	@media screen and ( max-width: $smartphone_portrait + px ) {
 		height: get-vw-480(100);

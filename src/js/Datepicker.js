@@ -39,9 +39,8 @@
 			autoHide: true,
 			autoPick: true,
 			language: 'pl-PL'
-			
-			
-		}
+	
+		};
 		
 
 

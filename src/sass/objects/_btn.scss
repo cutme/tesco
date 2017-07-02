@@ -63,12 +63,11 @@
 	&--white {
 		background-color: white;
 		color: $c-blue;
-		
-		&:hover {
-			i {
-				//padding-right: 5px;
-			}
-		}
+	}
+	
+	&--white-red {
+		background-color: white;
+		color: $c-red;
 	}
 	
 	&--big {

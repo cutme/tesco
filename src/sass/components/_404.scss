@@ -1,0 +1,79 @@
+.c-404 {
+	@extend %abs;
+	@extend %flex;
+	@extend %flex-xy;
+	left: 0; top: 0;
+	flex-direction: column;
+	width: 100%; min-height: 100%;
+	background: {
+		repeat: no-repeat;
+		size: cover;
+		position: center;
+	}
+	padding: 100px 20px;
+	text-align: center;
+	color: white;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		padding: get-vw-768(100) 20px;
+	}
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		padding: get-vw-640(100) 20px;
+	}
+	
+	@media screen and ( max-width: $smartphone_portrait + px ) {
+		padding: get-vw-480(100) 20px;
+	}
+
+	@media screen and ( min-width: $smartphone + 1px ) {
+		background-image: url(../img/bg/404@2x.jpg);
+	}
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		background-image: url(../img/bg/404.jpg);
+	}
+	
+	h1, h2 {
+		line-height: 1;
+		font-weight: $bold;
+	}
+	
+	h1 {
+		margin-bottom: 10px;
+		font-size: em(256);
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			font-size: get-vw-640(256);
+		}
+	}
+	
+	h2 {
+		margin-bottom: 15px;
+		font-size: em(32);
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			margin-bottom: get-vw-640(15);
+			font-size: get-vw-640(32);
+		}
+		
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+			margin-bottom: get-vw-480(15);
+		}
+	}
+	
+	p {
+		margin-bottom: 35px;
+		font-size: em(16);
+		
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+			margin-bottom: get-vw-480(35);
+			font-size: get-vw-480(20);
+		}
+	}
+	
+	.o-btn {
+		font-weight: $medium;
+		padding: 0 40px;	
+	}
+}
