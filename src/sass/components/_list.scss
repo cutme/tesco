@@ -54,13 +54,30 @@
 			width: grid(260, $base - 80);
 		}
 		
-		
+		@media screen and ( max-width: $tablet + px ) {
+		    justify-content: flex-end;
+		    
+		}	
 		
 		.o-btn {
 			display: flex;
 		    flex-grow: 1;
 		    justify-content: center;
 		    padding: 0;
+		    
+		    @media screen and ( max-width: $tablet + px ) {
+		    	flex-grow: 0;
+				width: 63px;
+				height: 63px;
+				
+/*
+				.icon-heart,
+				.icon-plus {
+					color: white;
+				}
+				
+*/
+			}
 
 		    &:first-of-type {
 			    margin-right: 5px;
@@ -402,6 +419,8 @@
 					}
 				}
 				
+				
+				
 				@media screen and ( max-width: $smartphone_portrait + px ) {
 					height: get-vw-480(64);
 	
@@ -484,7 +503,7 @@
 		@media screen and ( min-width: $smartphone + 1px ) {
 			width: grid(100, $base - 80);
 		}
-		
+
 		@media screen and ( max-width: $smartphone + px ) {
 			width: 70px;
 			padding: 0 5px;
@@ -508,8 +527,8 @@
 
 		.icon-heart {
 			margin-right: 4px;
-			color: $c-blue--brighter;
-			
+			color: $c-blue--brighter;			
+						
 			@media screen and ( max-width: $smartphone + px ) {
 				font-size: em(20);				
 			}
@@ -521,6 +540,11 @@
 		margin-left: 10px;
 		color: #80add7;
 		font-size: em(12);
+		
+		@media screen and ( max-width: $tablet + px ) {
+			//width: 63px;
+			//height: 63px;			
+		}
 	}
 	
 	[class^="icon-"] {

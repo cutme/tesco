@@ -22,9 +22,14 @@
 	color: white;
 	cursor: pointer;
 	
-	@media screen and ( max-width: $smartphone + px ) {
-		width: get-vw-640(64);
-		height: get-vw-640(64);
+	@media screen and ( max-width: 640px ) {
+		height: get-vw-640(63); 
+		width: get-vw-640(63); 
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		width: get-vw-480(63);
+		height: get-vw-480(63);
 		font-size: get-vw-640(24);
 	}
 }

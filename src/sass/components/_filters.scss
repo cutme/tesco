@@ -296,7 +296,7 @@
 			.o-field {
 				padding-right: 88px;
 			
-				@media screen and ( max-width: $tablet_portrait + px ) {
+				@media screen and ( max-width: $tablet + px ) {
 					height: 64px;
 					font-size: em(20);
 				}
