@@ -86,14 +86,27 @@
 			display: inline-block;
 			height: 40px;
 			
+			@media screen and ( max-width: $tablet + px ) {
+			
+				width: 40px;
+				height: 40px;
+
+				&:nth-child(n + 7):not(:nth-child(n + 11)) {
+					display: none;
+				}
+
+			}
+			
 			@media screen and ( max-width: $smartphone + px ) {
 				width: get-vw-640(64);
 				height: get-vw-640(64);
 				text-align: center;
 				
-				&:nth-child(n + 7):not(:nth-child(n + 11)) {
+				/*
+&:nth-child(n + 7):not(:nth-child(n + 11)) {
 					display: none;
 				}
+*/
 
 			}
 			
@@ -105,6 +118,11 @@
 				display: block;
 				line-height: 40px;
 				padding: 0 8px;
+				
+				@media screen and ( max-width: $tablet + px ) {
+					padding: 0;
+					text-align: center;
+				}
 				
 				@media screen and ( max-width: $smartphone + px ) {
 					line-height: get-vw-640(64);
