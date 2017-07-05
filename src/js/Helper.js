@@ -39,27 +39,20 @@
 	
 	function clearInput(container) {
 		var el = $(container),
-			clearBtn = $('<div class="o-clear-input icon-x" />'),
+			clearBtn = $('.js-clearBtn'),
 			input = $('input', el),
-			chars;
-		
-		el.append(clearBtn);
-		
-		input.on('keyup', function() {
 			chars = input.val().length;
-
+		
+		
+		function showClearButton() {
 			if (chars > 0) {
 				clearBtn.addClass('is-active');
 			} else {
 				clearBtn.removeClass('is-active');
 			}
-		});
+		}
 		
-		clearBtn.on('click', function(e) {
-			e.preventDefault();
-			input.val('').focus();
-			clearBtn.removeClass('is-active');
-		});
+		showClearButton();
 	}
 
     function exist(o) {
