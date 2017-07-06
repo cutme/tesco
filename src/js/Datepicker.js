@@ -6,85 +6,13 @@
 	Datepicker.prototype.init = function(el) {	
 	
 		var date = new Date(),
-			currentDate = [date.getFullYear(), date.getMonth(), date.getDate()];
-			
-	
-	switchLang();
+			currentDate = [date.getFullYear(), date.getMonth(), date.getDate()],
+			$inputFrom,
+			$inputTo,
+			fromDate,
+			toDate,
+			containerBox;
 
-	var $inputFrom = $('#fromDate').pickadate({
-			format: 'dd.mm.yyyy',
-			container: 'body',
-			onStart: function() {
-			    var date = new Date();
-	            this.set('select', currentDate);
-			},
-			onClose: function(context) {
-				toDate.set('min', this.get());
-			}
-	});
-	var fromDate = $inputFrom.pickadate('picker');
-
-
-	var $inputTo = $('#toDate').pickadate({
-			format: 'dd.mm.yyyy',
-			container: 'body',
-			min: true,
-			onStart: function() {
-			    var date = new Date();
-	            this.set('select', currentDate);
-			},
-			onClose: function(context) {
-				fromDate.set('max', this.get('select'))
-			}
-	});
-	var toDate = $inputTo.pickadate('picker');
-	
-	
-	
-	//picker.set('view', currentDate, { format: 'dd-mm-yyyy' });
-	//picker.set('select', currentDate, { format: 'd-m-yy' });
-	//picker.set('select', '04-30', { format: 'hh-i' })
-
-
-			
-		
-	/*
-	var $input2 = $('#toDate').pickadate({
-			format: 'd.mm.yyyy',	
-			min: true,
-			//min: new Date(2017,7,6),
-			
-			onSet: function() {
-				console.log('b');
-			}
-		});
-		
-		var picker2 = $input2.pickadate('picker2');
-		
-
-		
-
-		var $input1 = $('#fromDate').pickadate({	
-			format: 'd.mm.yyyy',
-			onStart: function() {
-			    var date = new Date();
-                this.set('select', currentDate);
-			},
-			onSet: function(thingSet) {
-				
-			    console.log('Set stuff:', thingSet);
-			    picker2.set('min', '9.07.2017');
-				
-				
-			}
-		});
-		
-		var picker1 = $input1.pickadate('picker');
-		
-*/
-		
-		
-	
 		function switchLang() {
 			var lang = $('html').attr('lang');
 			
@@ -185,25 +113,49 @@
 			}
 		}
 		
+		switchLang();
 		
 		
-		
-		
-
-		//$('#toDate').datepicker(datepickerOptions);
-
-		/*
-$('#fromDate').datepicker(datepickerOptions).on('pick.datepicker', function (e) {
-		
-			//$('.c-filters__overlay').addClass('openedDatepicker');
-		
-			$('#toDate').datepicker('destroy');
-			$("#toDate").datepicker(datepickerOptions);
-
-			$('#toDate').datepicker('setDate', e.date);
+		if ( $('.mobile').length > 0 ) {
 			
+			$('body').append('<div id="root-picker-outlet" />');
+			
+			containerBox = '#root-picker-outlet';
+			
+		}
+
+		$inputFrom = $('#fromDate').pickadate({
+				format: 'dd.mm.yyyy',
+				container: containerBox,
+				onStart: function() {
+				    var date = new Date();
+		            this.set('select', currentDate);
+				},
+				onClose: function(context) {
+					toDate.set('min', this.get());
+				}
 		});
-*/
+
+		fromDate = $inputFrom.pickadate('picker');
+		
+
+		$inputTo = $('#toDate').pickadate({
+				format: 'dd.mm.yyyy',
+				container: containerBox,
+				min: true,
+				onStart: function() {
+				    var date = new Date();
+		            this.set('select', currentDate);
+				},
+				onClose: function(context) {
+					fromDate.set('max', this.get('select'))
+				}
+		});
+
+		toDate = $inputTo.pickadate('picker');
+	
+		
+		
 	};
 
 	tesco.Datepicker = new Datepicker();
