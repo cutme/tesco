@@ -9,12 +9,11 @@
 	    justify-content: center;
 	    align-items: center;
     }
-    
-    
 
 	.mobile-nav & {
 		@media screen and ( max-height: $smartphone + px ) {
-			padding-top: get-vw-640(100);
+			//padding-top: get-vw-640(100);
+			padding-top: 120px;
 		}
 	}
 
@@ -77,6 +76,17 @@
 		.mobile-nav & {
 			display: flex;
 			animation: fadeInFromNone .5s ease-out;
+		}
+	}
+	
+	@media screen and ( max-height: 400px ) {
+		.mobile-nav & {
+			display: block;
+			padding-bottom: 60px;
+			
+			ul {
+				margin: 0 auto;
+			}
 		}
 	}
 

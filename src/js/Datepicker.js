@@ -13,6 +13,7 @@
 
 	var $inputFrom = $('#fromDate').pickadate({
 			format: 'dd.mm.yyyy',
+			container: 'body',
 			onStart: function() {
 			    var date = new Date();
 	            this.set('select', currentDate);
@@ -26,6 +27,7 @@
 
 	var $inputTo = $('#toDate').pickadate({
 			format: 'dd.mm.yyyy',
+			container: 'body',
 			min: true,
 			onStart: function() {
 			    var date = new Date();
