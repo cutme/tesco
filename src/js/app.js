@@ -7,8 +7,9 @@
 		tesco.Helper.isMobile();
 		//tesco.Helper.iosFix();
 		tesco.Nav.menu();
+	
 		
-		tesco.Helper.clearInput('.c-filters__item--search');
+		if (tesco.Helper.exist('.c-filters__item--search')) tesco.Helper.clearInput('.c-filters__item--search');
 		
 		if (tesco.Helper.exist('.b-lazy')) tesco.Helper.blazy();
 		if (tesco.Helper.exist('.js-accordion')) tesco.Accordion.init('#list');
@@ -17,7 +18,7 @@
 		if (tesco.Helper.exist('.js-openGallery')) new tesco.Gallery();
 		if (tesco.Helper.exist('.js-upload')) new tesco.Upload.init();
 		if (tesco.Helper.exist('.nice-select')) tesco.Helper.nSelect();		
-		if (tesco.Helper.exist('[data-toggle="datepicker"]')) tesco.Datepicker.init();
+//		if (tesco.Helper.exist('[data-toggle="datepicker"]')) tesco.Datepicker.init();
 		
 		if (tesco.Helper.exist('#autocomplete')) tesco.Autocomplete.init();
 		if (tesco.Helper.exist('#list')) tesco.Vote.init();

@@ -162,10 +162,15 @@
 			    margin-right: 10px;
 		    }
 		    
+		    .o-field {
+				opacity: 1 !important;
+			}
+		    
 		    .nav-filters & {
 		    	margin-right: 0;
 		    	
 			    .o-field {
+	
 			    	@media screen and ( min-height: 400px ) and ( max-width: $tablet + px ) {
 						height: 80px;
 				    	font-size: em(20);
@@ -180,23 +185,11 @@
 						height: get-vw-480(80);
 				    	font-size: get-vw-480(20);
 					}
-				
-			    	/*
-@media screen and ( min-width: $smartphone + 1px ) and ( orientation: portrait ) {
-				    	height: 80px;
-				    	font-size: em(20);
-			    	}
-			    	
-			    	@media screen and ( max-width: $smartphone + px) and ( orientation: portrait ) {
-			    		height: get-vw-560(80);
-				    	font-size: get-vw-560(20);
-				    }
-				    
-				    @media screen and ( max-width: $smartphone_portrait + px ) and ( orientation: portrait ) {
-				    	height: get-vw-480(80);
-				    	font-size: get-vw-480(20);
-				    }
-*/
+					
+					@media screen and ( max-width: 375px ) {
+						padding: 0 10px;
+						text-align: center;
+					}
 			    }			   	    
 		    }
 	    }
