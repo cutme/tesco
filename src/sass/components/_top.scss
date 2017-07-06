@@ -11,6 +11,14 @@
 	@media screen and ( max-width: $tablet_portrait + px ) {
 		height: get-vw-768(100);
 	}
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		height: get-vw-640(100);
+	}
+	
+	@media screen and ( max-width: 560px ) {
+		height: get-vw-560(100);
+	}
 
 	@media screen and ( max-width: $smartphone_portrait + px ) {
 		height: get-vw-480(100);

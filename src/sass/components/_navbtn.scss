@@ -19,6 +19,16 @@
 		}
 	}
 	
+	@media screen and ( max-width: $smartphone + px ) {
+		top: get-vw-640(37);
+	}
+	
+	@media screen and ( max-width: 560px ) {
+		top: get-vw-560(37);
+	}
+	
+	
+	
 	@media screen and ( max-width: $smartphone_portrait + px ) {
 		left: get-vw-480(40);
 		top: get-vw-480(37);
